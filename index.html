@@ -6,11 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities  {
+            .navs{
+                @apply relative tracking-[1px] hover:text-gray-400 cursor-pointer font-[Lobster]
+            }
+            .navs::after{
+                @apply content-[''] bg-pink-500 h-[3px] w-0 left-0 -bottom-[5px]
+                rounded-xl absolute duration-500 
+            }
+            .navs:hover::after{
+                @apply bg-pink-500 h-[3px] w-full left-0 -bottom-[5px]
+                rounded-xl absolute duration-500 
+            }
+          .btn{
+            @apply relative border-2 mt-2 lg:mt-0 rounded-md border-gray-800 bg-transparent py-2 px-4 font-medium uppercase  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-gray-800 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100
+          }
+    }
+    </style>
+    <style>
+        label {
+            position: absolute;
+            width: 45px;
+            height: 22px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        label:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            left: 1px;
+            top: 1px;
+            border-radius: 50%;
+            background: #000;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        label.active:before {
+            left: 24px;
+
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&family=Lobster&family=Nosifer&display=swap');
+    </style>
 </head>
 
-<body>
+<body class="bg-gray-100">
     <div class="text-white p-4 bg-black w-full flex items-center justify-center lg:space-x-3  ">
-        <p class="text-center text-xs md:text-sm italic">Elevate your Style! Holiday Sale Up to 50% Off.</p>
+        <p class="text-center text-xs md:text-sm italic ">Elevate your Style! Holiday Sale Up to 50% Off.</p>
         <p class="ml-auto  underline text-xs lg:mx-5 italic">Shop</p>
     </div>
     <div class="relative z-50">
@@ -29,25 +77,27 @@
                         alt="Description of the image">
                 </picture>
             </div>
-            <div
-                class=" lg:space-y-5 lg:w-[700px] lg:h-auto absolute left-0 text-white top-[420px] lg:relative lg:text-black lg:top-0 ">
+            <div id="col2"
+                class=" lg:space-y-5 lg:w-[700px] lg:h-auto text-white lg:text-black absolute left-0 top-[420px] font-[Caveat] lg:relative  lg:top-0 ">
                 <p class="text-xl font-semibold">Up to 50% off.</p>
-                <p class="text-3xl ">Holiday Sale</p>
+                <p class="text-3xl lg:text-5xl ">Holiday Sale</p>
                 <p class=" text-xs">Extended returns still January 1st.</p>
-                <button class="text-sm">Shop Now</button>
+                <button class="btn">Shop Now</button>
             </div>
         </div>
 
 
         <!-- NavB -->
-        <nav class="bg-transparent p-4 text-white flex justify-center items-center absolute top-0 w-full">
+        <nav class="bg-transparent  navbar p-4 -white flex justify-center items-center absolute top-0 w-full">
             <div class=" w-1/4 flex justify-start items-center lg:space-x-16 space-x-2">
-                <h1 class="uppercase text-2xl font-bold hidden lg:block" style="letter-spacing: 5px;">tth.</h1>
-                <ul class="hidden lg:flex justify-center items-center space-x-8 text-sm font-medium">
-                    <li>Shop</li>
-                    <li>Journal</li>
-                    <li>Stores</li>
-                    <li>Support</li>
+                <label class="lg:top-[23px] border-white lg:border-black text top-[20px] right-16 lg:right-96  " id="dark-change"></label>
+                <h1 class="uppercase text-2xl font-bold hidden font-[Lobster]  lg:block" style="letter-spacing: 5px;">
+                    tth.</h1>
+                <ul class="hidden lg:flex justify-center items-center font-[Lobster] space-x-8 text-lg font-medium">
+                    <li class="navs">Shop</li>
+                    <li class="navs">Journal</li>
+                    <li class="navs">Stores</li>
+                    <li class="navs">Support</li>
                 </ul>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -65,18 +115,21 @@
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
             </div>
-            <div class=" text-center text-lg w-1/2">
-                <h1 class="uppercase lg:hidden font-bold" style="letter-spacing: 3px;">tth</h1>
+            <div class=" text-center  w-1/2">
+                <h1 class="uppercase lg:hidden font-bold font-[Lobster] text-lg " style="letter-spacing: 3px;">tth</h1>
             </div>
-            <div class="w-1/4 flex justify-end lg:space-x-20">
-                <ul class="hidden lg:flex text-black justify-center items-center space-x-8 text-sm font-medium">
-                    <li>search</li>
-                    <li>Help</li>
-                    <li>My account</li>
+            
+            <div class="w-1/4 flex justify-end lg:space-x-12">
+                <ul
+                    class="hidden lg:flex text-black justify-center items-center space-x-8 text-lg font-medium font-[Lobster]">
+                 
+                    <li class="navs">search</li>
+                    <li class="navs">Help</li>
+                    <li class="navs">My account</li>
                 </ul>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-lock p-2 rounded-full bg-black">
+                    class="feather feather-lock p-2 rounded-full text-white bg-black">
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                 </svg>
@@ -95,34 +148,87 @@
             <div class="space-y-2 mt-2">
                 <h1 class="font-bold text-sm">Modular Packing</h1>
                 <p class="text-xs">Unboxing like never before.</p>
-                <button class="mt-6 text-sm underline ">Read story</button>
+                <button class="mt-6 text-sm  navs">Read story</button>
             </div>
         </div>
-        <div class="col2 block justify-center items-center lg:flex lg:space-x-12">
-            <div>
-                <img class="w-full lg:w-56 h-auto"
-                    src="https://www.etq-amsterdam.com/cdn/shop/articles/ETQ-LT_01_Premium_Suede-Flatlay_GIF-Compressed-4x5-v01_400x.gif?v=1679596578"
-                    alt="">
+            <div class="col2 hidden justify-center items-center lg:flex lg:space-x-12">
+                <div>
+                    <img class="w-full lg:w-56 h-auto"
+                        src="https://www.etq-amsterdam.com/cdn/shop/articles/ETQ-LT_01_Premium_Suede-Flatlay_GIF-Compressed-4x5-v01_400x.gif?v=1679596578"
+                        alt="">
+                </div>
+                <div class="space-y-2 mt-2">
+                    <h1 class="font-bold text-sm">Modular Packing</h1>
+                    <p class="text-xs">Unboxing like never before.</p>
+                    <button class="mt-6 text-sm   navs">Read story</button>
+                </div>
             </div>
-            <div class="space-y-2 mt-2">
-                <h1 class="font-bold text-sm">Modular Packing</h1>
-                <p class="text-xs">Unboxing like never before.</p>
-                <button class="mt-6 text-sm underline ">Read story</button>
+            <div class="col3 hidden justify-center items-center lg:flex lg:space-x-12">
+                <div>
+                    <img class="w-full lg:w-56 h-auto"
+                        src="https://www.etq-amsterdam.com/cdn/shop/articles/3Y2A6352_400x.png?v=1695914102" alt="">
+                </div>
+                <div class="space-y-2 mt-2">
+                    <h1 class="font-bold text-sm">Modular Packing</h1>
+                    <p class="text-xs">Unboxing like never before.</p>
+                    <button class="mt-6 text-sm navs">Read story</button>
+                </div>
             </div>
-        </div>
-        <div class="col3 block justify-center items-center lg:flex lg:space-x-12">
-            <div>
-                <img class="w-full lg:w-56 h-auto"
-                    src="https://www.etq-amsterdam.com/cdn/shop/articles/3Y2A6352_400x.png?v=1695914102" alt="">
+        
+        <!-- hidden on lg  -->
+        <div class="flex grid-cols-2 lg:grid-cols-1 gap-4 place-items-center lg:hidden">
+            <div class="col2 block justify-center items-center lg:flex lg:space-x-12">
+                <div>
+                    <img class="w-full lg:w-56 h-auto"
+                        src="https://www.etq-amsterdam.com/cdn/shop/articles/ETQ-LT_01_Premium_Suede-Flatlay_GIF-Compressed-4x5-v01_400x.gif?v=1679596578"
+                        alt="">
+                </div>
+                <div class="space-y-2 mt-2">
+                    <h1 class="font-bold text-sm">Modular Packing</h1>
+                    <p class="text-xs">Unboxing like never before.</p>
+                    <button class="mt-6 text-sm   navs">Read story</button>
+                </div>
             </div>
-            <div class="space-y-2 mt-2">
-                <h1 class="font-bold text-sm">Modular Packing</h1>
-                <p class="text-xs">Unboxing like never before.</p>
-                <button class="mt-6 text-sm underline ">Read story</button>
+            <div class="col3 block justify-center items-center lg:flex lg:space-x-12">
+                <div>
+                    <img class="w-full lg:w-56 h-auto"
+                        src="https://www.etq-amsterdam.com/cdn/shop/articles/3Y2A6352_400x.png?v=1695914102" alt="">
+                </div>
+                <div class="space-y-2 mt-2">
+                    <h1 class="font-bold text-sm">Modular Packing</h1>
+                    <p class="text-xs">Unboxing like never before.</p>
+                    <button class="mt-6 text-sm navs">Read story</button>
+                </div>
             </div>
         </div>
 
     </div>
+
+
+    <script>
+        const navbar = document.querySelector(".navbar");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 0) {
+                navbar.classList.remove("bg-transparent");
+                navbar.classList.remove("text-white");
+                navbar.classList.add("bg-white");
+                navbar.classList.add("text-black");
+                navbar.classList.add("shadow-2xl");
+            } else {
+                navbar.classList.remove("bg-white");
+                navbar.classList.add("bg-transparent");
+                navbar.classList.add("text-white");
+                navbar.classList.remove("text-black");
+                navbar.classList.remove("shadow-2xl");
+            }
+        });
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function () {
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+    </script>
 </body>
 
 </html>
