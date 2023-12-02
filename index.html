@@ -4,9 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Owl Carousel CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>Document</title>
+    <style>
+        .owl-carousel .owl-nav{
+            position: absolute !important;
+            top: 4% !important;
+            right: 4% !important;
+
+        }
+       .owl-carousel .owl-prev,
+        .owl-carousel .owl-next{
+            /* width: 100%; */
+         background-color: white  !important;
+         color: black !important;
+         font-size: 23px !important;
+         font: bolder !important;
+         border: 2px solid black !important;
+         width: 40px;
+         height: 40px;
+
+        }
+        .owl-carousel .owl-dots {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            position: absolute !important; 
+            /* top: -4%; */
+            bottom: -4% !important;
+            width: 100%;
+            /* transform: translateY(-50%); */
+            z-index: 1 !important;
+        }
+        .owl-carousel .owl-dots  span{
+            /* background-color: #fff !important; */
+            display: inline-block;
+            width: 20px; /* Adjust the size of the circle as needed */
+            height: 20px;
+            background-color: gray; /* Adjust the background color as needed */
+            border-radius: 50%;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+    .owl-carousel .owl-dots .active span
+    {
+        background-color: black !important;
+    }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
+        
+        
         @layer utilities  {
             .navs{
                 @apply relative tracking-[1px] hover:text-gray-400 cursor-pointer font-[Lobster]
@@ -210,8 +260,59 @@
         </div>
 
     </div>
-</div>
+    <!-- Your carousel container -->
+<div class="my-10 p-2 lg:p-4 space-y-4">
 
+<h1 class="text-2xl lg:text-3xl font-[Lobster]  ">The Favourites:</h1>
+    <div class="owl-carousel">
+        <div class="space-y-2"><img class="" src="https://media.istockphoto.com/id/1081025754/photo/mens-black-leather-shoes-on-a-black-background.jpg?s=612x612&w=0&k=20&c=ZlSlv4s3StVBpjNUO2guUNbuKFKwnpoMyS-ljY3uyUk=">
+            <div class="text-xs lg:text-sm">
+        <p>Lorem ipsum dolor sit amet</p>
+        <p class="text-red-600">Holiday Sale. -30%</p>
+        <p class="text-gray-400">
+            <span style="text-decoration: line-through;">$380</span>
+            <span class="text-black mx-3">$290</span>
+          </p>
+    </div>
+    </div>
+        <div class="space-y-2 "><img class="" src="https://media.istockphoto.com/id/1009081386/photo/sport-shoes-dumbbells-skipping-rope-and-digital-stopwatch-fitness-sport-and-healthy-lifestyle.jpg?s=612x612&w=0&k=20&c=5hvBzEeB6vOHzXhxC8u-n4TEY-NorJ_NPVl1u4mzsJk=">
+            <div class="text-xs lg:text-sm">
+                <p>Lorem ipsum dolor sit amet</p>
+                <p class="text-red-600">Holiday Sale. -30%</p>
+                <p class="text-gray-400">
+                    <span style="text-decoration: line-through;">$380</span>
+                    <span class="text-black mx-3">$290</span>
+                  </p>
+            </div></div>
+        <div class="space-y-2">
+            <img class="" src="https://media.istockphoto.com/id/1345357430/photo/fashion-white-shoes-accessory-foot-and-moving-lighting-on-black-background-lifestyle-unisex.jpg?s=612x612&w=0&k=20&c=YxGH7-U1M9zjXJDHEG-gS2X05bR17OSSBwLqKdVi1jI=" alt="">
+            <div class="text-xs lg:text-sm">
+                <p>Lorem ipsum dolor sit amet</p>
+                <p class="text-red-600">Holiday Sale. -30%</p>
+                <p class="text-gray-400">
+                    <span style="text-decoration: line-through;">$380</span>
+                    <span class="text-black mx-3">$290</span>
+                  </p>
+            </div>
+        </div>
+        <div class="space-y-2">
+            <img class="" src="https://media.istockphoto.com/id/1345357430/photo/fashion-white-shoes-accessory-foot-and-moving-lighting-on-black-background-lifestyle-unisex.jpg?s=612x612&w=0&k=20&c=YxGH7-U1M9zjXJDHEG-gS2X05bR17OSSBwLqKdVi1jI=" alt="">
+            <div class="text-xs lg:text-sm">
+                <p>Lorem ipsum dolor sit amet</p>
+                <p class="text-red-600">Holiday Sale. -30%</p>
+                <p class="text-gray-400">
+                    <span style="text-decoration: line-through;">$380</span>
+                    <span class="text-black mx-3">$290</span>
+                  </p>
+            </div>
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+    </div>
+</div>
+<!-- Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         const navbar = document.querySelector(".navbar");
 
@@ -240,6 +341,33 @@
             document.getElementById("loading-container").classList.add("hidden");
             document.getElementById("content").classList.remove("hidden");
         }, 2000); 
+    </script>
+    <!-- Initialize Owl Carousel -->
+<script>
+    $('.owl-carousel').owlCarousel({
+        margin:10,
+        responsiveClass:true,
+        loop:true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        dot : true,
+        autoplayHoverPause:true,
+        nav : true,
+        responsive:{
+            0:{
+                items:1,
+                // center : true, 
+            },
+            600:{
+                items:2,
+            },
+            1000:{
+                items:3,
+                // loop:true
+                nav : true,
+            }
+        }
+    })
     </script>
 </body>
 
