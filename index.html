@@ -57,6 +57,13 @@
 </head>
 
 <body class="bg-gray-100">
+       <!-- Loading GIF -->
+       <div id="loading-container" class="fixed top-0 left-0 w-full h-full flex items-center justify-center  bg-opacity-75 z-50">
+        <!-- Replace 'path/to/loading.gif' with the actual path to your loading GIF -->
+        <img src="https://media1.giphy.com/media/KDsyKk9WuAmr3pVsjy/giphy.gif?cid=6c09b9520onhx2bj3dqhrlhvetg6o5sz09veh2gm905dwsst&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
+            alt="Loading" class="w-36 h-36">
+    </div>
+    <div id="content" class="hidden">
     <div class="text-white p-4 bg-black w-full flex items-center justify-center lg:space-x-3  ">
         <p class="text-center text-xs md:text-sm italic ">Elevate your Style! Holiday Sale Up to 50% Off.</p>
         <p class="ml-auto  underline text-xs lg:mx-5 italic">Shop</p>
@@ -203,7 +210,7 @@
         </div>
 
     </div>
-
+</div>
 
     <script>
         const navbar = document.querySelector(".navbar");
@@ -228,6 +235,11 @@
             darkMode.classList.toggle('active');
             content.classList.toggle('night');
         })
+        setTimeout(function () {
+            // Hide loading indicator after the task is complete
+            document.getElementById("loading-container").classList.add("hidden");
+            document.getElementById("content").classList.remove("hidden");
+        }, 2000); 
     </script>
 </body>
 
