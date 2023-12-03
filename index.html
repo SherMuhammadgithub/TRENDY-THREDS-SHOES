@@ -4,59 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- Owl Carousel CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>Document</title>
     <style>
-        .owl-carousel .owl-nav{
+        .owl-carousel .owl-nav {
             position: absolute !important;
             top: 4% !important;
             right: 4% !important;
 
         }
-       .owl-carousel .owl-prev,
-        .owl-carousel .owl-next{
+
+        .owl-carousel .owl-prev,
+        .owl-carousel .owl-next {
             /* width: 100%; */
-         background-color: white  !important;
-         color: black !important;
-         font-size: 23px !important;
-         font: bolder !important;
-         border: 2px solid black !important;
-         width: 40px;
-         height: 40px;
+            background-color: white !important;
+            color: black !important;
+            font-size: 23px !important;
+            font: bolder !important;
+            border: 2px solid black !important;
+            width: 40px;
+            height: 40px;
 
         }
+
         .owl-carousel .owl-dots {
             display: flex !important;
             justify-content: center !important;
             align-items: center !important;
-            position: absolute !important; 
+            position: absolute !important;
             /* top: -4%; */
             bottom: -4% !important;
             width: 100%;
             /* transform: translateY(-50%); */
             z-index: 1 !important;
         }
-        .owl-carousel .owl-dots  span{
+
+        .owl-carousel .owl-dots span {
             /* background-color: #fff !important; */
             display: inline-block;
-            width: 20px; /* Adjust the size of the circle as needed */
+            width: 20px;
+            /* Adjust the size of the circle as needed */
             height: 20px;
-            background-color: gray; /* Adjust the background color as needed */
+            background-color: gray;
+            /* Adjust the background color as needed */
             border-radius: 50%;
             margin-left: 4px;
             margin-right: 4px;
         }
-    .owl-carousel .owl-dots .active span
-    {
-        background-color: black !important;
-    }
+
+        .owl-carousel .owl-dots .active span {
+            background-color: black !important;
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
-        
-        
+
+
         @layer utilities  {
             .navs{
                 @apply relative tracking-[1px] hover:text-gray-400 cursor-pointer font-[Lobster]
@@ -72,10 +78,14 @@
           .btn{
             @apply relative border-2 mt-2 lg:mt-0 rounded-md border-gray-800 bg-transparent py-2 px-4 font-medium uppercase  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-gray-800 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100
           }
+          h1{
+            @apply font-bold text-sm
+          
+          }
     }
     </style>
     <style>
-        label {
+        .lables {
             position: absolute;
             width: 45px;
             height: 22px;
@@ -83,7 +93,7 @@
             border-radius: 20px;
         }
 
-        label:before {
+        .lables:before {
             position: absolute;
             content: '';
             width: 20px;
@@ -96,7 +106,7 @@
             transition: 0.4s;
         }
 
-        label.active:before {
+        .lables.active:before {
             left: 24px;
 
         }
@@ -107,107 +117,112 @@
 </head>
 
 <body class="bg-gray-100">
-       <!-- Loading GIF -->
-       <div id="loading-container" class="fixed top-0 left-0 w-full h-full flex items-center justify-center  bg-opacity-75 z-50">
+    <!-- Loading GIF -->
+    <div id="loading-container"
+        class="fixed top-0 left-0 w-full h-full flex items-center justify-center  bg-opacity-75 z-50">
         <!-- Replace 'path/to/loading.gif' with the actual path to your loading GIF -->
         <img src="https://media1.giphy.com/media/KDsyKk9WuAmr3pVsjy/giphy.gif?cid=6c09b9520onhx2bj3dqhrlhvetg6o5sz09veh2gm905dwsst&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
             alt="Loading" class="w-36 h-36">
     </div>
     <div id="content" class="hidden">
-    <div class="text-white p-4 bg-black w-full flex items-center justify-center lg:space-x-3  ">
-        <p class="text-center text-xs md:text-sm italic ">Elevate your Style! Holiday Sale Up to 50% Off.</p>
-        <p class="ml-auto  underline text-xs lg:mx-5 italic">Shop</p>
-    </div>
-    <div class="relative z-50">
-        <div class="flex items-center justify-center space-x-10">
-
-
-            <div class="col1 w-full">
-                <picture>
-                    <!-- Source for larger screens -->
-                    <source media="(min-width: 1024px)"
-                        srcset="https://www.etq-amsterdam.com/cdn/shop/files/image00001_Dekstop_1200x.png?v=1701167209">
-
-                    <!-- Source for smaller screens or fallback -->
-                    <img class="w-full h-auto"
-                        src="https://cdn.pixabay.com/photo/2018/12/05/13/41/woman-3857758_640.jpg"
-                        alt="Description of the image">
-                </picture>
-            </div>
-            <div id="col2"
-                class=" lg:space-y-5 lg:w-[700px] lg:h-auto text-white lg:text-black absolute left-0 top-[344px] sm:top-[420px] md:top-[560px] font-[Caveat] lg:relative  lg:top-0 ">
-                <p class="text-xl font-semibold">Up to 50% off.</p>
-                <p class="text-3xl md:text-5xl ">Holiday Sale</p>
-                <p class=" text-xs">Extended returns still January 1st.</p>
-                <button class="btn">Shop Now</button>
-            </div>
+        <div class="text-white p-4 bg-black w-full flex items-center justify-center lg:space-x-3  ">
+            <p class="text-center text-xs md:text-sm italic ">Elevate your Style! Holiday Sale Up to 50% Off.</p>
+            <p class="ml-auto  underline text-xs lg:mx-5 italic">Shop</p>
         </div>
+        <div class="relative z-50">
+            <div class="flex items-center justify-center space-x-10">
 
 
-        <!-- NavB -->
-        <nav class="bg-transparent  navbar p-4 -white flex justify-center items-center absolute top-0 w-full">
-            <div class=" w-1/4 flex justify-start items-center lg:space-x-16 space-x-2">
-                <label class="lg:top-[23px] border-gray-300 lg:border-black text top-[20px] right-16 xl:right-96 lg:right-80  " id="dark-change"></label>
-                <h1 class="uppercase text-2xl font-bold hidden font-[Lobster]  lg:block" style="letter-spacing: 5px;">
-                    tth.</h1>
-                <ul class="hidden lg:flex justify-center items-center font-[Lobster] space-x-8 text-lg font-medium">
-                    <li class="navs">Shop</li>
-                    <li class="navs">Journal</li>
-                    <li class="navs">Stores</li>
-                    <li class="navs">Support</li>
-                </ul>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-align-justify">
-                    <line x1="21" y1="10" x2="3" y2="10"></line>
-                    <line x1="21" y1="6" x2="3" y2="6"></line>
-                    <line x1="21" y1="14" x2="3" y2="14"></line>
-                    <line x1="21" y1="18" x2="3" y2="18"></line>
-                </svg>
+                <div class="col1 w-full">
+                    <picture>
+                        <!-- Source for larger screens -->
+                        <source media="(min-width: 1024px)"
+                            srcset="https://www.etq-amsterdam.com/cdn/shop/files/image00001_Dekstop_1200x.png?v=1701167209">
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-search ">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </div>
-            <div class=" text-center  w-1/2">
-                <h1 class="uppercase lg:hidden font-bold font-[Lobster] text-lg " style="letter-spacing: 3px;">tth</h1>
-            </div>
-            
-            <div class="w-1/4 flex justify-end xl:space-x-12 lg:space-x-2">
-                <ul
-                    class="hidden lg:flex text-black justify-center items-center space-x-8 text-lg font-medium font-[Lobster]">
-                 
-                    <li class="navs">search</li>
-                    <li class="navs">Help</li>
-                    <li class="navs">My account</li>
-                </ul>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-lock p-2 rounded-full text-white bg-black">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
+                        <!-- Source for smaller screens or fallback -->
+                        <img class="w-full h-auto"
+                            src="https://cdn.pixabay.com/photo/2018/12/05/13/41/woman-3857758_640.jpg"
+                            alt="Description of the image">
+                    </picture>
+                </div>
+                <div id="col2"
+                    class=" lg:space-y-5 lg:w-[700px] lg:h-auto text-white lg:text-black absolute left-0 top-[344px] sm:top-[420px] md:top-[560px] font-[Caveat] lg:relative  lg:top-0 ">
+                    <p class="text-xl font-semibold">Up to 50% off.</p>
+                    <p class="text-3xl md:text-5xl ">Holiday Sale</p>
+                    <p class=" text-xs">Extended returns still January 1st.</p>
+                    <button class="btn">Shop Now</button>
+                </div>
             </div>
 
-        </nav>
-    </div>
-    <!-- section 2 -->
-    <div class=" mx-4 lg:mx-16 my-12 lg:my-16 grid grid-cols-1 lg:grid-cols-3 gap-6 place-items-center ">
-        <div class="col1 block justify-center items-center lg:flex lg:space-x-12">
-            <div>
-                <img class="w-full lg:w-56 h-auto"
-                    src="https://www.etq-amsterdam.com/cdn/shop/articles/ETQ-FitpicsHQ-0855-26-04-22-Packing-Boxes_crob_LR_15_400x.png?v=1672415228"
-                    alt="">
-            </div>
-            <div class="space-y-2 mt-2">
-                <h1 class="font-bold text-sm">Modular Packing</h1>
-                <p class="text-xs">Unboxing like never before.</p>
-                <button class="mt-6 text-sm  navs">Read story</button>
-            </div>
+
+            <!-- NavB -->
+            <nav class="bg-transparent  navbar p-4 -white flex justify-center items-center absolute top-0 w-full">
+                <div class=" w-1/4 flex justify-start items-center lg:space-x-16 space-x-2">
+                    <label
+                        class=" lables lg:top-[23px] border-gray-300 lg:border-black text top-[20px] right-16 xl:right-96 lg:right-80  "
+                        id="dark-change"></label>
+                    <h1 class="uppercase text-2xl font-bold hidden font-[Lobster]  lg:block"
+                        style="letter-spacing: 5px;">
+                        tth.</h1>
+                    <ul class="hidden lg:flex justify-center items-center font-[Lobster] space-x-8 text-lg font-medium">
+                        <li class="navs">Shop</li>
+                        <li class="navs">Journal</li>
+                        <li class="navs">Stores</li>
+                        <li class="navs">Support</li>
+                    </ul>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-align-justify">
+                        <line x1="21" y1="10" x2="3" y2="10"></line>
+                        <line x1="21" y1="6" x2="3" y2="6"></line>
+                        <line x1="21" y1="14" x2="3" y2="14"></line>
+                        <line x1="21" y1="18" x2="3" y2="18"></line>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-search ">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <div class=" text-center  w-1/2">
+                    <h1 class="uppercase lg:hidden font-bold font-[Lobster] text-lg " style="letter-spacing: 3px;">tth
+                    </h1>
+                </div>
+
+                <div class="w-1/4 flex justify-end xl:space-x-12 lg:space-x-2">
+                    <ul
+                        class="hidden lg:flex text-black justify-center items-center space-x-8 text-lg font-medium font-[Lobster]">
+
+                        <li class="navs">search</li>
+                        <li class="navs">Help</li>
+                        <li class="navs">My account</li>
+                    </ul>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-lock p-2 rounded-full text-white bg-black">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+
+            </nav>
         </div>
+        <!-- section 2 -->
+        <div class=" mx-4 lg:mx-16 my-12 lg:my-16 grid grid-cols-1 lg:grid-cols-3 gap-6 place-items-center ">
+            <div class="col1 block justify-center items-center lg:flex lg:space-x-12">
+                <div>
+                    <img class="w-full lg:w-56 h-auto"
+                        src="https://www.etq-amsterdam.com/cdn/shop/articles/ETQ-FitpicsHQ-0855-26-04-22-Packing-Boxes_crob_LR_15_400x.png?v=1672415228"
+                        alt="">
+                </div>
+                <div class="space-y-2 mt-2">
+                    <h1 class="font-bold text-sm">Modular Packing</h1>
+                    <p class="text-xs">Unboxing like never before.</p>
+                    <button class="mt-6 text-sm  navs">Read story</button>
+                </div>
+            </div>
             <div class="col2 hidden justify-center items-center lg:flex lg:space-x-12">
                 <div>
                     <img class="w-full lg:w-56 h-auto"
@@ -231,88 +246,182 @@
                     <button class="mt-6 text-sm navs">Read story</button>
                 </div>
             </div>
-        
-        <!-- hidden on lg  -->
-        <div class="flex grid-cols-2 lg:grid-cols-1 gap-4 place-items-center lg:hidden">
-            <div class="col2 block justify-center items-center lg:flex lg:space-x-12">
-                <div>
-                    <img class="w-full lg:w-56 h-auto"
-                        src="https://www.etq-amsterdam.com/cdn/shop/articles/ETQ-LT_01_Premium_Suede-Flatlay_GIF-Compressed-4x5-v01_400x.gif?v=1679596578"
+
+            <!-- hidden on lg  -->
+            <div class="flex grid-cols-2 lg:grid-cols-1 gap-4 place-items-center lg:hidden">
+                <div class="col2 block justify-center items-center lg:flex lg:space-x-12">
+                    <div>
+                        <img class="w-full lg:w-56 h-auto"
+                            src="https://www.etq-amsterdam.com/cdn/shop/articles/ETQ-LT_01_Premium_Suede-Flatlay_GIF-Compressed-4x5-v01_400x.gif?v=1679596578"
+                            alt="">
+                    </div>
+                    <div class="space-y-2 mt-2">
+                        <h1 class="font-bold text-sm">Modular Packing</h1>
+                        <p class="text-xs">Unboxing like never before.</p>
+                        <button class="mt-6 text-sm   navs">Read story</button>
+                    </div>
+                </div>
+                <div class="col3 block justify-center items-center lg:flex lg:space-x-12">
+                    <div>
+                        <img class="w-full lg:w-56 h-auto"
+                            src="https://www.etq-amsterdam.com/cdn/shop/articles/3Y2A6352_400x.png?v=1695914102" alt="">
+                    </div>
+                    <div class="space-y-2 mt-2">
+                        <h1 class="font-bold text-sm">Modular Packing</h1>
+                        <p class="text-xs">Unboxing like never before.</p>
+                        <button class="mt-6 text-sm navs">Read story</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Your carousel container -->
+        <div class="my-10 p-4 lg:p-8 space-y-4">
+
+            <h1 class="text-2xl lg:text-3xl font-[Lobster]  ">The Favourites:</h1>
+            <div class="owl-carousel">
+                <div class="space-y-2"><img class=""
+                        src="https://media.istockphoto.com/id/1081025754/photo/mens-black-leather-shoes-on-a-black-background.jpg?s=612x612&w=0&k=20&c=ZlSlv4s3StVBpjNUO2guUNbuKFKwnpoMyS-ljY3uyUk=">
+                    <div class="text-xs lg:text-sm">
+                        <p>Lorem ipsum dolor sit amet</p>
+                        <p class="text-red-600">Holiday Sale. -30%</p>
+                        <p class="text-gray-400">
+                            <span style="text-decoration: line-through;">$380</span>
+                            <span class="text-black mx-3">$290</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-2 "><img class=""
+                        src="https://media.istockphoto.com/id/1009081386/photo/sport-shoes-dumbbells-skipping-rope-and-digital-stopwatch-fitness-sport-and-healthy-lifestyle.jpg?s=612x612&w=0&k=20&c=5hvBzEeB6vOHzXhxC8u-n4TEY-NorJ_NPVl1u4mzsJk=">
+                    <div class="text-xs lg:text-sm">
+                        <p>Lorem ipsum dolor sit amet</p>
+                        <p class="text-red-600">Holiday Sale. -30%</p>
+                        <p class="text-gray-400">
+                            <span style="text-decoration: line-through;">$380</span>
+                            <span class="text-black mx-3">$290</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <img class=""
+                        src="https://media.istockphoto.com/id/1345357430/photo/fashion-white-shoes-accessory-foot-and-moving-lighting-on-black-background-lifestyle-unisex.jpg?s=612x612&w=0&k=20&c=YxGH7-U1M9zjXJDHEG-gS2X05bR17OSSBwLqKdVi1jI="
                         alt="">
+                    <div class="text-xs lg:text-sm">
+                        <p>Lorem ipsum dolor sit amet</p>
+                        <p class="text-red-600">Holiday Sale. -30%</p>
+                        <p class="text-gray-400">
+                            <span style="text-decoration: line-through;">$380</span>
+                            <span class="text-black mx-3">$290</span>
+                        </p>
+                    </div>
                 </div>
-                <div class="space-y-2 mt-2">
-                    <h1 class="font-bold text-sm">Modular Packing</h1>
-                    <p class="text-xs">Unboxing like never before.</p>
-                    <button class="mt-6 text-sm   navs">Read story</button>
+                <div class="space-y-2">
+                    <img class=""
+                        src="https://media.istockphoto.com/id/1345357430/photo/fashion-white-shoes-accessory-foot-and-moving-lighting-on-black-background-lifestyle-unisex.jpg?s=612x612&w=0&k=20&c=YxGH7-U1M9zjXJDHEG-gS2X05bR17OSSBwLqKdVi1jI="
+                        alt="">
+                    <div class="text-xs lg:text-sm">
+                        <p>Lorem ipsum dolor sit amet</p>
+                        <p class="text-red-600">Holiday Sale. -30%</p>
+                        <p class="text-gray-400">
+                            <span style="text-decoration: line-through;">$380</span>
+                            <span class="text-black mx-3">$290</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col3 block justify-center items-center lg:flex lg:space-x-12">
-                <div>
-                    <img class="w-full lg:w-56 h-auto"
-                        src="https://www.etq-amsterdam.com/cdn/shop/articles/3Y2A6352_400x.png?v=1695914102" alt="">
-                </div>
-                <div class="space-y-2 mt-2">
-                    <h1 class="font-bold text-sm">Modular Packing</h1>
-                    <p class="text-xs">Unboxing like never before.</p>
-                    <button class="mt-6 text-sm navs">Read story</button>
-                </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-4 p-4 place-items-center lg:p-8">
+            <div class="col1 space-y-2">
+                <img src="https://www.etq-amsterdam.com/cdn/shop/files/ETQ-Flatlay6Okt-20838_1_liggend_1080x.png?v=1697656238" alt="">
+                <button class="navs">TTH Menswear</button>
+                <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="col2 space-y-2">
+                <img src="https://www.etq-amsterdam.com/cdn/shop/files/1ETQ-Flatlay6Okt-21018_1080x.png?v=1699526987" alt="">
+                <button class="navs">TTH Menswear</button>
+                <p class="text-xs">Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
 
-    </div>
-    <!-- Your carousel container -->
-<div class="my-10 p-2 lg:p-4 space-y-4">
-
-<h1 class="text-2xl lg:text-3xl font-[Lobster]  ">The Favourites:</h1>
-    <div class="owl-carousel">
-        <div class="space-y-2"><img class="" src="https://media.istockphoto.com/id/1081025754/photo/mens-black-leather-shoes-on-a-black-background.jpg?s=612x612&w=0&k=20&c=ZlSlv4s3StVBpjNUO2guUNbuKFKwnpoMyS-ljY3uyUk=">
-            <div class="text-xs lg:text-sm">
-        <p>Lorem ipsum dolor sit amet</p>
-        <p class="text-red-600">Holiday Sale. -30%</p>
-        <p class="text-gray-400">
-            <span style="text-decoration: line-through;">$380</span>
-            <span class="text-black mx-3">$290</span>
-          </p>
-    </div>
-    </div>
-        <div class="space-y-2 "><img class="" src="https://media.istockphoto.com/id/1009081386/photo/sport-shoes-dumbbells-skipping-rope-and-digital-stopwatch-fitness-sport-and-healthy-lifestyle.jpg?s=612x612&w=0&k=20&c=5hvBzEeB6vOHzXhxC8u-n4TEY-NorJ_NPVl1u4mzsJk=">
-            <div class="text-xs lg:text-sm">
-                <p>Lorem ipsum dolor sit amet</p>
-                <p class="text-red-600">Holiday Sale. -30%</p>
-                <p class="text-gray-400">
-                    <span style="text-decoration: line-through;">$380</span>
-                    <span class="text-black mx-3">$290</span>
-                  </p>
-            </div></div>
-        <div class="space-y-2">
-            <img class="" src="https://media.istockphoto.com/id/1345357430/photo/fashion-white-shoes-accessory-foot-and-moving-lighting-on-black-background-lifestyle-unisex.jpg?s=612x612&w=0&k=20&c=YxGH7-U1M9zjXJDHEG-gS2X05bR17OSSBwLqKdVi1jI=" alt="">
-            <div class="text-xs lg:text-sm">
-                <p>Lorem ipsum dolor sit amet</p>
-                <p class="text-red-600">Holiday Sale. -30%</p>
-                <p class="text-gray-400">
-                    <span style="text-decoration: line-through;">$380</span>
-                    <span class="text-black mx-3">$290</span>
-                  </p>
+        <div class="space-y-2 lg:hidden my-6">
+            <div class="mx-2 relative p-4">
+            
+                <input type="checkbox" id="sher" class="peer hidden"   name="status" >
+                  <h1 >About Trendy Treads</h1>
+                  <label for="sher" class=" absolute top-1 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-bold">+</label>
+                  <div for="sher" class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+          
+                    <div class="p-2 text-sm text-justify italic">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel?</p>
+            
+                    </div>
+                </div>
+              
+              
+             
+             
             </div>
-        </div>
-        <div class="space-y-2">
-            <img class="" src="https://media.istockphoto.com/id/1345357430/photo/fashion-white-shoes-accessory-foot-and-moving-lighting-on-black-background-lifestyle-unisex.jpg?s=612x612&w=0&k=20&c=YxGH7-U1M9zjXJDHEG-gS2X05bR17OSSBwLqKdVi1jI=" alt="">
-            <div class="text-xs lg:text-sm">
-                <p>Lorem ipsum dolor sit amet</p>
-                <p class="text-red-600">Holiday Sale. -30%</p>
-                <p class="text-gray-400">
-                    <span style="text-decoration: line-through;">$380</span>
-                    <span class="text-black mx-3">$290</span>
-                  </p>
+            <hr class="mx-4">
+            <div class="mx-2 relative p-4">
+            
+              <input type="checkbox" id="shers" class="peer hidden"   name="status" >
+                <h1>Address</h1>
+                <label for="shers" class=" absolute top-1 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-bold">+</label>
+                <div for="shers" class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+          
+                  <div class="p-2 italic text-sm text-justify">
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel?</p>
+          
+                  </div>
+              </div>
+            
+            
+           
+           
+          </div>
+          <hr class="mx-4">
+          <div class="mx-2 relative p-4">
+            
+            <input type="checkbox" id="sher1" class="peer hidden"   name="status" >
+              <h1>Info</h1>
+              <label for="sher1" class=" absolute top-1 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-bold">+</label>
+              <div for="sher1" class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+          
+                <div class="p-2 italic text-sm text-justify">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel?</p>
+          
+                </div>
             </div>
-        </div>
-        <!-- Add more slides as needed -->
+          
+          
+          
+          
+          </div>
+          <hr class="mx-4">
+          <div class="mx-2 relative p-4">
+            
+            <input type="checkbox" id="sher2" class="peer hidden"   name="status" >
+              <h1>Follow Us</h1>
+              <label for="sher2" class=" absolute top-1 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-bold">+</label>
+              <div for="sher2" class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+          
+                <div class="p-2 italic text-justify text-sm">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel?</p>
+          
+                </div>
+            </div>
+          
+          
+          
+          
+          </div>
+          <hr class="mx-4">
+          </div>
     </div>
-    </div>
-</div>
-<!-- Owl Carousel JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- Owl Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         const navbar = document.querySelector(".navbar");
 
@@ -343,31 +452,31 @@
         }, 2000); 
     </script>
     <!-- Initialize Owl Carousel -->
-<script>
-    $('.owl-carousel').owlCarousel({
-        margin:10,
-        responsiveClass:true,
-        loop:true,
-        autoplay:true,
-        autoplayTimeout:2000,
-        dot : true,
-        autoplayHoverPause:true,
-        nav : true,
-        responsive:{
-            0:{
-                items:1,
-                // center : true, 
-            },
-            600:{
-                items:2,
-            },
-            1000:{
-                items:3,
-                // loop:true
-                nav : true,
+    <script>
+        $('.owl-carousel').owlCarousel({
+            margin: 10,
+            responsiveClass: true,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            dot: true,
+            autoplayHoverPause: true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    // center : true, 
+                },
+                600: {
+                    items: 2,
+                },
+                1000: {
+                    items: 3,
+                    // loop:true
+                    nav: true,
+                }
             }
-        }
-    })
+        })
     </script>
 </body>
 
