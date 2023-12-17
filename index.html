@@ -124,15 +124,17 @@
         <img src="https://media1.giphy.com/media/KDsyKk9WuAmr3pVsjy/giphy.gif?cid=6c09b9520onhx2bj3dqhrlhvetg6o5sz09veh2gm905dwsst&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
             alt="Loading" class="w-36 h-36">
     </div>
+    <!-- Content of Home Page-->
     <div id="content" class="hidden">
         <div class="text-white p-4 bg-black w-full flex items-center justify-center lg:space-x-3  ">
-            <p class="text-center text-xs md:text-sm italic ">Elevate your Style! Holiday Sale Up to 50% Off.</p>
-            <p class="ml-auto  underline text-xs lg:mx-5 italic">Shop</p>
+            <p class="text-center md:text-sm  text-xs font-[lobster]" style="letter-spacing: 1px;">Elevate your Style!
+                Holiday Sale Up to 50% Off.</p>
+            <a href="allProducts.html">
+                <p class="ml-auto  underline text-xs lg:mx-5 italic">Shop</p>
+            </a>
         </div>
         <div class="relative z-50">
             <div class="flex items-center justify-center space-x-10">
-
-
                 <div class="col1 w-full">
                     <picture>
                         <!-- Source for larger screens -->
@@ -150,13 +152,13 @@
                     <p class="text-xl font-semibold">Up to 50% off.</p>
                     <p class="text-3xl md:text-5xl ">Holiday Sale</p>
                     <p class=" text-xs">Extended returns still January 1st.</p>
-                    <button class="btn">Shop Now</button>
+                    <button class="btn"><a href="allProducts.html">Shop Now</a></button>
                 </div>
             </div>
 
 
             <!-- NavB -->
-            <nav class="bg-transparent  navbar p-4 -white flex justify-center items-center absolute top-0 w-full">
+            <nav class="bg-white text-black p-4 -white flex justify-center items-center absolute top-0 w-full">
                 <div class=" w-1/4 flex justify-start items-center lg:space-x-16 space-x-2">
                     <label
                         class=" lables lg:top-[23px] border-gray-300 lg:border-black text top-[20px] right-16 xl:right-96 lg:right-80  "
@@ -165,14 +167,49 @@
                         style="letter-spacing: 5px;">
                         tth.</h1>
                     <ul class="hidden lg:flex justify-center items-center font-[Lobster] space-x-8 text-lg font-medium">
-                        <li class="navs">Shop</li>
-                        <li class="navs">Journal</li>
-                        <li class="navs">Stores</li>
-                        <li class="navs">Support</li>
+                        <div class="group">
+                            <button class="navs"><a href="allProducts.html">SummerCollections</a></button>
+                            <ul class="ul text-[#5c5c5c] space-y-2 absolute text-base w-1/6  p-6 mt-5 py-5 hidden  bg-white border border-gray-300  shadow-md"
+                                style="border-top: 2px solid gray;">
+                                <li class=" px-6  hover:bg-gray-100">CASUAL PRET'23 </li>
+                                <li class=" px-6 hover:bg-gray-100">FALL'22 </li>
+                                <li class=" px-6 hover:bg-gray-100">S/S'22</li>
+                            </ul>
+                        </div>
+                        <div class="group">
+                            <button class="navs">SummerGlow </button>
+                            <ul class="ul text-[#5c5c5c] space-y-2 absolute text-base w-1/6  p-6 mt-5 py-5 hidden  bg-white border border-gray-300  shadow-md"
+                                style="border-top: 2px solid gray;">
+                                <li class=" px-6  hover:bg-gray-100">CASUAL PRET'23 </li>
+                                <li class=" px-6 hover:bg-gray-100">FALL'22 </li>
+                                <li class=" px-6 hover:bg-gray-100">S/S'22</li>
+                            </ul>
+                        </div>
+                        <div class="group">
+                            <button class="navs">SolarFlare </button>
+                            <ul class="ul text-[#5c5c5c] space-y-2 absolute text-base w-1/6  p-6 mt-5 py-5 hidden  bg-white border border-gray-300  shadow-md"
+                                style="border-top: 2px solid gray;">
+                                <li class=" px-6  hover:bg-gray-100">CASUAL PRET'23 </li>
+                                <li class=" px-6 hover:bg-gray-100">FALL'22 </li>
+                                <li class=" px-6 hover:bg-gray-100">S/S'22</li>
+                            </ul>
+                        </div>
+                        <div class="group">
+                            <button class="navs">BeachBreeze </button>
+                            <ul class="ul text-[#5c5c5c] space-y-2 absolute text-base w-1/6  p-6 mt-5 py-5 hidden  bg-white border border-gray-300  shadow-md"
+                                style="border-top: 2px solid gray;">
+                                <li class=" px-6  hover:bg-gray-100">CASUAL PRET'23 </li>
+                                <li class=" px-6 hover:bg-gray-100">FALL'22 </li>
+                                <li class=" px-6 hover:bg-gray-100">S/S'22</li>
+                            </ul>
+                        </div>
+
+
+
                     </ul>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-align-justify">
+                    <svg id="openBtn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-align-justify">
                         <line x1="21" y1="10" x2="3" y2="10"></line>
                         <line x1="21" y1="6" x2="3" y2="6"></line>
                         <line x1="21" y1="14" x2="3" y2="14"></line>
@@ -187,7 +224,8 @@
                     </svg>
                 </div>
                 <div class=" text-center  w-1/2">
-                    <h1 class="uppercase lg:hidden font-bold font-[Lobster] text-lg " style="letter-spacing: 3px;">tth
+                    <h1 id="openBtns" class="uppercase lg:hidden font-bold font-[Lobster] text-lg "
+                        style="letter-spacing: 3px;">tth
                     </h1>
                 </div>
 
@@ -208,6 +246,99 @@
                 </div>
 
             </nav>
+
+
+            <!-- Side Navbar that will displpay only on sm Screens -->
+            <!--SIDE NAVBAR HERE -->
+
+            <div id="sidebar"
+                class="w-[70%] md:w-1/3  overflow-hidden overflow-y-scroll bg-black text-white fixed top-0 h-full transform -translate-x-full transition-transform xl:hidden z-[30] ">
+                <!-- Sidebar content -->
+                <button id="closeBtn" class="
+    absolute top-1 right-1 p-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-x-square">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                    </svg></button>
+                <div class="mx-2 relative py-6 px-3 mt-8">
+
+                    <input type="checkbox" id="nav1" class="peer hidden" name="status">
+                    <h1 class="text-lg font-[lobster]"><a href="allProducts.html">SummerCollections</a></h1>
+                    <label for="nav1"
+                        class=" absolute top-4 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                    <div for="nav1"
+                        class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                        <div class="p-2 italic  text-sm text-center">
+                            <p>Sher</p>
+                            <p>Sher</p>
+                            <p>Sher</p>
+
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-1 border-gray-100 mx-2 ">
+                <div class="mx-2 relative py-6 px-3">
+
+                    <input type="checkbox" id="nav2" class="peer hidden" name="status">
+                    <h1 class="text-lg font-[lobster]">SummerGlow</h1>
+                    <label for="nav2"
+                        class=" absolute top-4 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                    <div for="nav2"
+                        class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                        <div class="p-2 italic  text-sm text-center">
+                            <p>Sher</p>
+                            <p>Sher</p>
+                            <p>Sher</p>
+
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-1 border-gray-100 mx-2 ">
+                <div class="mx-2 relative py-6 px-3">
+
+                    <input type="checkbox" id="nav3" class="peer hidden" name="status">
+                    <h1 class="text-lg font-[lobster]">SolarFlare</h1>
+                    <label for="nav3"
+                        class=" absolute top-4 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                    <div for="nav3"
+                        class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                        <div class="p-2 italic  text-sm text-center">
+                            <p>Sher</p>
+                            <p>Sher</p>
+                            <p>Sher</p>
+
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-1 border-gray-100 mx-2 ">
+                <div class="mx-2 relative py-6 px-3">
+
+                    <input type="checkbox" id="nav4" class="peer hidden" name="status">
+                    <h1 class="text-lg font-[lobster]">BeachBreeze</h1>
+                    <label for="nav4"
+                        class=" absolute top-4 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                    <div for="nav4"
+                        class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                        <div class="p-2 italic  text-sm text-center">
+                            <p>Sher</p>
+                            <p>Sher</p>
+                            <p>Sher</p>
+
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-1 border-gray-100 mx-2 ">
+
+            </div>
+
+
         </div>
         <!-- section 2 -->
         <div class=" mx-4 lg:mx-16 my-12 lg:my-16 grid grid-cols-1 lg:grid-cols-3 gap-6 place-items-center ">
@@ -275,8 +406,8 @@
             </div>
 
         </div>
-        <!-- Your carousel container -->
-        <div class="my-10 p-4 lg:p-8 space-y-4">
+        <!-- carousel container -->
+        <div class="my-10 p-4 lg:p-8 space-y-4 lg:mx-10">
 
             <h1 class="text-2xl lg:text-3xl font-[Lobster]  ">The Favourites:</h1>
             <div class="owl-carousel">
@@ -330,21 +461,21 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-4 p-4 place-items-center lg:p-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-4 p-4 place-items-center  lg:mx-10">
             <div class="col1 space-y-2">
                 <img src="https://www.etq-amsterdam.com/cdn/shop/files/ETQ-Flatlay6Okt-20838_1_liggend_1080x.png?v=1697656238"
                     alt="">
-                <button class="btn font-[Caveat]">TTH Menswear</button>
-                <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+                <button class="btn font-[Caveat]"><a href="allProducts.html">TTH Menswear</a></button>
+                <p class="text-xs  font-[lobster]" style="letter-spacing: 2px;">Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="col2 space-y-2">
                 <img src="https://www.etq-amsterdam.com/cdn/shop/files/1ETQ-Flatlay6Okt-21018_1080x.png?v=1699526987"
                     alt="">
-                <button class="btn font-[Caveat]">TTH Menswear</button>
-                <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+                <button class="btn font-[Caveat]"><a href="allProducts.html">TTH Menswear</a></button>
+                <p class="text-xs  font-[lobster]" style="letter-spacing: 2px;">Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
-
+        <!-- footer on sm screens  -->
         <div class="space-y-2 lg:hidden my-6">
             <div class="mx-2 relative p-4">
 
@@ -438,28 +569,120 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- footer -->
+        <hr class="border-1 border-gray-200 w-full mt-10 hidden md:block">
+        <footer>
+            <!-- for lg screens -->
+            <div class=" justify-evenly items-center hidden md:block font-[lobster] ">
+                <div class="grid grid-cols-3 md:grid-cols-2 xl:grid-cols-3 mt-6 gap-2 justify-center mx-16 ">
+                    <div class=" p-4 text-left ">
+                        <div class=" ">
+                            <h1 class="  underline " style="letter-spacing: 2px;">STORE</h1>
+                            <div class="para ">
+                                <div id="desk1" class=" mt-3 text-left   text-gray-600" style="letter-spacing: 1px;">
+                                    <h1 class="text-gray-400 italic text-sm md:text-base  "> 5-R, Gulberg Main road
+                                        Lahoreasas
+                                    </h1>
+                                    <h2 class=" text-gray-400  text-sm ">For Online Orders Queries: +92 346 111 39626 For
+                                        Booking an
+                                        Appointment: +92 345 849 6756
+                                    </h2>
+                                    <h3 class="my-5 text-gray-400 text-sm  ">
+                                        Store Hours
+                                    </h3>
+                                    <h4 class="text-sm text-gray-400 md:text-base">MONDAY - SATURDAY :</h4>
+                                    <h4 class="text-sm text-gray-400 md:text-base my-5">11:00 am - 07:00 pm</h4>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" p-4 text-right">
+                        <div class="">
+                            <h1 class="underline" style="letter-spacing: 2px;">ABOUT TTH</h1>
+                            <div class="para">
+                                <div id="desk2" class="   mt-2 text-right text-gray-600  ">
+                                    <p class="mb-6 mt-3 text-sm text-gray-400 md:text-base "
+                                        style="line-height: 25px; letter-spacing: 0.2px; ">Lorem ipsum dolor sit
+                                        amet consectetur adipisicing elit. Sed provident eius magnam non consequatur
+                                        consequuntur
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+                                    </p>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" p-4  xl:text-right md:text-left">
+                        <div class="">
+                            <h1 class=" underline" style="letter-spacing: 2px;">CUSTOMER SERVICE </h1>
+                            <div class="para">
+                                <div id="desk3" class=" xl:text-right md:text-left text-sm md:text-base  text-gray-400">
+                                    <div class="space-y-2" style="letter-spacing: 1px;">
+                                        <h1  >Contact us</h1>
+                                        <h1  >About us </h1>
+                                        <h1  > exchange & Refunds</h1>
+    
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+    
+    
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="text-center text-sm font-medium text-gray-400 mt-6">GET TO KNOW US</h1>
+            <div class=" flex  justify-center items-center space-x-5 p-4 ">
+                <ion-icon name="logo-facebook" class="text-black text-2xl md:text-3xl  font-bold "></ion-icon>
+                <ion-icon name="call-outline" class="text-black text-2xl md:text-3xl font-bold "></ion-icon>
+                <ion-icon name="logo-instagram" class="text-black text-2xl md:text-3xl font-bold "></ion-icon>
+                <ion-icon name="mail-outline" class="text-black text-2xl md:text-3xl font-bold "></ion-icon>
+                <ion-icon name="logo-whatsapp" class="text-black text-2xl md:text-3xl font-bold "></ion-icon>
+                <!-- grid div ends here  -->
+
+                <!-- sixe -->
+
+            </div>
+        </footer>
     </div>
 
     <!-- Owl Carousel JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-        const navbar = document.querySelector(".navbar");
+        const dropdownGroups = document.querySelectorAll('.group');
 
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 0) {
-                navbar.classList.remove("bg-transparent");
-                navbar.classList.remove("text-white");
-                navbar.classList.add("bg-white");
-                navbar.classList.add("text-black");
-                navbar.classList.add("shadow-2xl");
-            } else {
-                navbar.classList.remove("bg-white");
-                navbar.classList.add("bg-transparent");
-                navbar.classList.add("text-white");
-                navbar.classList.remove("text-black");
-                navbar.classList.remove("shadow-2xl");
-            }
+        dropdownGroups.forEach(dropdownGroup => {
+            const dropdownMenu = dropdownGroup.querySelector('.ul');
+            let timer;
+
+            dropdownGroup.addEventListener('mouseenter', () => {
+                clearTimeout(timer);
+                dropdownMenu.classList.remove('hidden');
+            });
+
+            dropdownGroup.addEventListener('mouseleave', () => {
+                timer = setTimeout(() => {
+                    dropdownMenu.classList.add('hidden');
+                }, 100);
+            });
+
+            dropdownMenu.addEventListener('mouseenter', () => {
+                clearTimeout(timer);
+            });
+
+            dropdownMenu.addEventListener('click', () => {
+                dropdownMenu.classList.add('hidden');
+            });
         });
         var darkMode = document.getElementById('dark-change');
         darkMode.addEventListener('click', function () {
@@ -470,7 +693,20 @@
             // Hide loading indicator after the task is complete
             document.getElementById("loading-container").classList.add("hidden");
             document.getElementById("content").classList.remove("hidden");
-        }, 2000); 
+        }, 2000);
+
+
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('openBtn');
+        const closeBtn = document.getElementById('closeBtn');
+
+        openBtn.addEventListener('click', () => {
+            sidebar.classList.remove('-translate-x-full');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+        });
     </script>
     <!-- Initialize Owl Carousel -->
     <script>

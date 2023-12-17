@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&family=Lobster&family=Nosifer&display=swap');
+    </style>
+
+    
+</head>
+
+<body>
+
+<!-- loading spinner  -->
+<div id="loading-container" class="flex items-center justify-center h-screen">
+    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-black"></div>
+  </div>
+  <div id="content" class="hidden">
+
+
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-2   ">
+        <!-- col 1 -->
+        <div class=" col1 col-span-1 md:col-span-1 w-full  ">
+            <div class="flex justify-center my-5">
+                
+                <div class="text-xl font-bold   md:mt-8" style="letter-spacing: 2px;">
+                    <h1 class="text-center font-bold font-[lobster]">TTH</h1>
+                </div>
+            </div>
+            <div class="mx-2 relative p-4 lg:hidden">
+
+                <input type="checkbox" id="sher" class="peer hidden" name="status">
+                <h1 class="text-sm font-serif font-normal uppercase">About Trendy Treads</h1>
+                <label for="sher" class=" absolute top-1 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-nore
+                  ">+</label>
+                <div for="sher"
+                    class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                    <div class="p-2 text-sm text-justify italic">
+                         <!-- flex 1 -->
+                <div class="flex items-center justify-center   ">
+                    <img src="https://media.istockphoto.com/id/1081025754/photo/mens-black-leather-shoes-on-a-black-background.jpg?s=612x612&w=0&k=20&c=ZlSlv4s3StVBpjNUO2guUNbuKFKwnpoMyS-ljY3uyUk="
+                    class="rounded-md w-20 h-20" alt="">
+                    <div class="text-sm  mx-4 font-serif ">American Eagle<br> (Special Colors) <br>
+                        <span class="text-sm no-underline">American Eagle Silver Grey</span>
+                    </div>
+                    <div class="ml-auto text-sm text-gray-500"> Rs 3,500.00</div>
+
+                </div>
+                <!-- flex 2 -->
+                <div class="flex items-center justify-center">
+                    <div class="text-sm ">Subtotal</div>
+                    <div class="text-sm  font-bold ml-auto">Rs 3,500.00</div>
+
+                </div>
+                <!-- flex 3 -->
+                <div class="flex items-center justify-center">
+                    <div class="text-sm  font-bold">Total</div>
+                    <div class="text-sm  font-bold ml-auto"> <span class="text-gray-300 font-normal">PKR</span> Rs
+                        3,500.00
+                    </div>
+
+                </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <!-- <div class="w-full bg-gray-100 flex items-center p-4 mt-6 md:px-32 lg:hidden">
+
+  
+
+ -->
+            <!-- form 1 -->
+            <div class="font-[lobster]" style="letter-spacing: 2px;" id="form1">
+                <div class="flex items-center justify-center space-x-2 font-thin text-sm  mt-6">
+                    <div class="text-gray-500">Cart</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <div class="font-bold font-[lobster]" style="letter-spacing: 1px;">Information</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <div class="text-gray-500 font-[lobster]" style="letter-spacing: 1px;">Shipping</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <div class="text-gray-500 font-[lobster]" style="letter-spacing: 1px;">payment</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                </div>
+                <!-- FOR MARGINS -->
+                <div class="md:mx-32 lg:mx-16 xl:mx-28 ">
+                    <div class="flex items-center my-6 mx-4">
+                        <div class="text-base font-medium ">Contact</div>
+                        <div class="text-sm ml-auto">Have an account? <span class="underline">Login</span></div>
+
+                    </div>
+                    <!-- FORM  -->
+                    <form action="" class="mx-3  space-y-4 text-sm my-3 ">
+
+                        <input required type="email" placeholder="Email or mobile phone number"
+                            class="w-full p-3 rounded-md border border-gray-300">
+                        <div class="flex items-center mt-2 space-x-2 ">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" class="w-4 h-4" value="Bike">
+                            <label for="vehicle1" class="text-sm"> Email me with news and offers</label>
+                        </div>
+                        <h1 class="mt-8 font-medium text-base">Shipping address</h1>
+                        <!-- <input type="text" placeholder="Country/Region" class="w-full p-3 rounded-md border border-gray-300"> -->
+                        <select id="cars" name="cars" class="w-full p-3 rounded-md border text-sm border-gray-300"
+                            aria-placeholder="sher">
+                            <option value="volvo">Pakistan</option>
+                            <option value="saab">America</option>
+
+                        </select>
+                        <div class="space-y-3 md:flex md:space-y-0 md:space-x-3">
+                            <input type="text" placeholder="First name"
+                                class="w-full  p-3 rounded-md border border-gray-300">
+                            <input type="text" placeholder="Last name"
+                                class="w-full   p-3  rounded-md border border-gray-300">
+                        </div>
+                        <input type="text" placeholder="Address" class="w-full p-3 rounded-md border border-gray-300">
+                        <div class="space-y-3 md:flex md:space-y-0 md:space-x-3">
+                            <input type="text" placeholder="City" class="w-full  p-3 rounded-md border border-gray-300">
+                            <input type="text" placeholder="Postal code"
+                                class="w-full  p-3 rounded-md border border-gray-300">
+                        </div>
+                        <div class="relative">
+                            <input type="text" placeholder="Phone"
+                                class=" relative w-full p-3 rounded-md border border-gray-300">
+
+                            <ion-icon class="h-6 w-6 absolute top-3 right-3   text-gray-400" name="alert-circle-outline"
+                                id="dropdownBtn"></ion-icon>
+                            <div id="dropdownContent"
+                                class="hidden absolute  bottom-6 right-2  py-4  bg-gray-800 text-white border border-gray-300  w-[50%] h-auto rounded-md shadow-lg"
+                                style="clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);">
+                                <!-- Dropdown content here -->
+                                <p class="text-sm text-center mb-10 mx-4 py-6">In case we need to contact you about your
+                                    oredr</p>
+                            </div>
+
+                        </div>
+                        <div class="flex items-center mt-2 space-x-2">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" class="w-4 h-4" value="Bike">
+                            <label for="vehicle1" class="text-sm"> Save this information for next time</label>
+                        </div>
+                    </form>
+
+                    <div class="mx-4 my-4 flex justify-end items-center">
+                        <button
+                            class="bg-gray-800 text-white text-center w-full md:w-[45%] xl:w-[40%] lg:w-[50%] p-4 text-sm font-medium rounded-md"
+                            id="form1ToForm2Btn" style="letter-spacing: 2px;">continue
+                            to
+                            shipping</button>
+                    </div>
+                    <div class="mx-7 my-6">
+                        <hr class="border border-gray-200 w-full my-2">
+                        <p class=" text-sm underline ">Refund Ploicy <span class="text-sm underline mx-4">Terms of
+                                Service</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- form2  -->
+            <div class="hidden font-[lobster]" style="letter-spacing: 2px;" id="form2">
+                <div class="flex items-center justify-center space-x-2 font-thin text-sm  mt-6">
+                    <div class="text-gray-500">Cart</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <div class="text-gray-500">Information</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <div class="font-bold">Shipping</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <div class="text-gray-500">payment</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                </div>
+                <!-- FOR MARGINS -->
+                <div class="md:mx-32 lg:mx-16 xl:mx-28 ">
+
+                    <!-- FORM  -->
+                    <div class=" border border-gray-300 mx-4 bg-[#f6f6f6] rounded-md my-6 p-3">
+                        <div class="flex items-center m-2">
+                            <div class="block md:flex md:space-x-7">
+                                <p class="text-base">Contact</p>
+                                <p class="text-sm  ">Sher@gmail.com</p>
+
+                            </div>
+                            <div class="ml-auto text-sm underline">
+                                Change
+                            </div>
+
+                        </div>
+                        <hr class="border border-gray-200 mx-4">
+
+                        <div class="flex items-center m-2">
+                            <div class="block md:flex md:space-x-7">
+                                <p class="text-base">Ship to</p>
+                                <p class="text-sm  ">Sheralabag</p>
+
+                            </div>
+                            <div class="ml-auto text-sm underline">
+                                Change
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="my-6 mx-4 space-y-2">
+                        <h1 class="text-lg font-bold">Shipping method</h1>
+                        <div class="border border-black p-4 bg-[#f6f6f6] rounded-md ">
+                            <div class="flex items-center text-sm">
+                                <p>Free Shipping</p>
+                                <p class="ml-auto font-bold">Free</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mx-4 my-4 block md:flex justify-end items-center">
+
+                        <button
+                            class="bg-gray-800  text-white text-center w-full md:w-[45%] 2xl:w-[40%] xl:w-[50%] lg:w-[50%] p-4 text-sm font-medium rounded-md"
+                            id="form2ToForm3Btn" style="letter-spacing: 2px;">continue
+                            to
+                            shipping</button>
+
+                    </div>
+                    <div class="flex justify-center items-center text-sm my-6 space-x-2 ">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                        <div class="cursor-pointer" id="form2ToForm1Btn">Return to information</div>
+                    </div>
+                    <!-- <div class="flex-grow mt-32 hidden md:block"> -->
+                    <!-- Empty div to push footer down if there's not enough content -->
+                    <!-- </div> -->
+
+                    <div class="mx-7 my-6 md:mt-32 2xl:mt-40 mt-6   ">
+                        <hr class="border border-gray-200 w-full my-4">
+                        <p class=" text-sm underline ">Refund Ploicy <span class="text-sm underline mx-4">Terms of
+                                Service</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- form 3 -->
+
+            <div class="hidden font-[lobster]" style="letter-spacing: 2px;" id="form3">
+                <div class="flex items-center justify-center space-x-1 text-sm font-thin  mt-6">
+                    <div class="text-gray-500">Cart</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <div class="text-gray-500">Information</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <div class="text-gray-500">Shipping</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <div class="font-bold">payment</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                </div>
+                <!-- FOR MARGINS -->
+                <div class="md:mx-32 lg:mx-16 xl:mx-28 ">
+
+                    <!-- FORM  -->
+                    <div class=" border border-gray-300 bg-[#f6f6f6] mx-4 rounded-md my-6 p-3">
+                        <div class="flex items-center m-2">
+                            <div class="block md:flex md:space-x-7">
+                                <p class="text-base">Contact</p>
+                                <p class="text-sm  ">Sher@gmail.com</p>
+
+                            </div>
+                            <div class="ml-auto text-sm underline">
+                                Change
+                            </div>
+
+                        </div>
+                        <hr class="border border-gray-200 mx-4">
+
+                        <div class="flex items-center m-2">
+                            <div class="block md:flex md:space-x-7">
+                                <p class="text-base">Ship to</p>
+                                <p class="text-sm  ">Sheralabag</p>
+
+                            </div>
+                            <div class="ml-auto text-sm underline">
+                                Change
+                            </div>
+
+                        </div>
+                        <hr class="border border-gray-200 mx-4">
+
+                        <div class="flex items-center m-2">
+                            <div class="block md:flex md:space-x-7">
+                                <p class="text-base">Method</p>
+                                <p class="text-sm  ">Free Shipping . <span class="font-bold">Free</span></p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="my-6 mx-4 space-y-3">
+                        <h1 class="text-lg font-bold">Payment</h1>
+                        <p class="text-sm text-gray-400 ">All transactions are secure and encrypted</p>
+                        <div class="border bg-[#f6f6f6] rounded-md ">
+                            <div class="flex items-center text-sm border-2 p-4 rounded-md border-black">
+                                <p class="text-base">Cash on Delivery (COD)</p>
+
+                            </div>
+                            <div class="flex items-center justify-center text-sm  p-4">
+                                <p class="text-sm text-center">Cash on Delivery</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- billing  -->
+                    <div class="my-6 mx-4 space-y-3">
+                        <h1 class="text-lg font-bold">Billing Address</h1>
+                        <p class="text-sm text-gray-400 ">All transactions are secure and encrypted</p>
+                        <div class="border bg-[#f6f6f6]  ">
+                            <div id="divWithBorder"
+                                class="border-2 p-4 border-black  flex items-center space-x-2 cursor-pointer transition-colors duration-300 ease-in-out text-sm">
+                                <!-- <input type="radio" name = "ans" value="yes" checked class="inline-flex"> <span class="mb-1 mx-2"></span>  </br> -->
+                                <ion-icon name="checkmark-done-outline"></ion-icon>
+                                <p>Same as shipping address</p>
+                                <!-- <input type="radio" name = "ans" value="no"> No </br>
+    <input type="radio" name = "ans" value="maybe" > Maybe </br> </br> -->
+
+                            </div>
+                            <div id="divWithoutBorder"
+                                class="p-4 navexp1 border-black  flex items-center space-x-2 cursor-pointer transition-colors duration-300 ease-in-out">
+
+                                <!-- <input type="radio" name = "ans" value="yes"  class="  inline-flex"> <span class="mb-1 mx-2">Use a different billing address</span>  </br> -->
+                                <ion-icon name="checkmark-done-outline"></ion-icon>
+                                <p class="text-sm">Use a different billing address</p>
+
+
+                            </div>
+                            <!-- hidewala -->
+                            <div class="hide11 z-10 bg-[#f6f6f6] p-4 hidden ">
+
+                                <form action="action=" class="mx-3  space-y-4  text-sm my-3 ">
+                                    <select id="cars" name="cars"
+                                        class="w-full p-3 rounded-md border text-sm border-gray-300"
+                                        aria-placeholder="sher">
+                                        <option value="volvo">Pakistan</option>
+                                        <option value="saab">America</option>
+
+                                    </select>
+                                    <div class="space-y-3 md:flex md:space-y-0 md:space-x-3">
+                                        <input type="text" placeholder="First name"
+                                            class="w-full  p-3 rounded-md border border-gray-300">
+                                        <input type="text" placeholder="Last name"
+                                            class="w-full   p-3  rounded-md border border-gray-300">
+                                    </div>
+                                    <input type="text" placeholder="Address"
+                                        class="w-full p-3 rounded-md border border-gray-300">
+                                    <div class="space-y-3 md:flex md:space-y-0 md:space-x-3">
+                                        <input type="text" placeholder="City"
+                                            class="w-full  p-3 rounded-md border border-gray-300">
+                                        <input type="text" placeholder="Postal code"
+                                            class="w-full  p-3 rounded-md border border-gray-300">
+                                    </div>
+                                    <div class="relative">
+                                        <input type="text" placeholder="Phone"
+                                            class=" relative w-full p-3 rounded-md border border-gray-300">
+
+                                        <ion-icon
+                                            class="h-6 w-6 absolute top-2/4 right-3 transform -translate-y-2/4 text-gray-400"
+                                            name="alert-circle-outline" id="dropdownBtn"></ion-icon>
+                                        <div id="dropdownContent"
+                                            class="hidden absolute  bottom-6 right-2  py-4  bg-gray-800 text-white border border-gray-300  w-[50%] h-auto rounded-md shadow-lg"
+                                            style="clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);">
+                                            <!-- Dropdown content here -->
+                                            <p class="text-sm text-center mb-10 mx-4 py-6">In case we need to contact
+                                                you about your
+                                                oredr</p>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mx-4 my-4 block md:flex justify-end items-center">
+
+                        <button
+                            class="bg-gray-800  text-white text-center w-full md:w-[45%] 2xl:w-[40%] xl:w-[50%] lg:w-[50%] p-4 text-sm font-medium rounded-md"
+                            id="form3ToForm4Btn" style="letter-spacing: 2px;">continue
+                            to
+                            oreder</button>
+
+                    </div>
+                    <div class="flex justify-center items-center text-sm my-6 space-x-2">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                        <div class="cursor-pointer" id="form3ToForm2Btn">Return to shipping</div>
+                    </div>
+                    <!-- <div class="flex-grow mt-32 hidden md:block"> -->
+                    <!-- Empty div to push footer down if there's not enough content -->
+                    <!-- </div> -->
+
+                    <div class="mx-7 my-6   ">
+                        <hr class="border border-gray-200 w-full my-4">
+                        <p class=" text-sm underline ">Refund Ploicy <span class="text-sm underline mx-4">Terms of
+                                Service</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- form 4 -->
+            <form id="form4" style="letter-spacing: 2px;" class="hidden font-[lobster]">
+                <!-- FOR MARGINS -->
+                <div class="md:mx-32 lg:mx-16 xl:mx-28 ">
+
+                    <!-- FORM  -->
+                    <div class="flex items-center space-x-2 space-y-1 mt-5">
+                        <!-- icons  -->
+                        <ion-icon name="checkmark-circle-outline" class="text-6xl"></ion-icon>
+                        <div class="block">
+                            <p class="text-sm">Order #201124</p>
+                            <p class="text-xl">Thank you , Sher Muahmmad!</p>
+
+                        </div>
+
+                    </div>
+                    <div class=" border border-gray-300 mx-4 bg-[#f6f6f6] rounded-md my-6 p-3">
+                        <div class="flex items-center m-2">
+                            <div class="block space-y-2">
+                                <p class="text-xl">Your order is confirmed</p>
+                                <p class="text-sm text-left ">Cash on Dilvery</p>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="mx-4 p-3 bg-[#f6f6f6] rounded-md border border-gray-300">
+                        <h1 class="text-lg px-1 md:px-4 mt-4">Order details </h1>
+                        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-y-0 bg-[#f6f6f6] ">
+                            <!-- col1  -->
+                            <div class="p-1 md:p-4 space-y-2">
+                                <div class=" space-y-1">
+                                    <h1 class="text-base font-medium ">Contact information </h1>
+                                    <p class="text-sm">sher@gmail.com</p>
+                                </div>
+                                <div class="space-y-1">
+                                    <h1 class="text-base font-medium ">Shipping Address </h1>
+                                    <p class="text-sm">M Street..</p>
+                                    <p class="text-sm">M Street..</p>
+                                    <p class="text-sm">M Street..</p>
+                                    <p class="text-sm">M Street..</p>
+                                    <p class="text-sm">69696969</p>
+                                </div>
+                                <div class="space-y-1">
+                                    <h1 class="text-base font-medium">Shipping method </h1>
+                                    <p class="text-sm">Free Shipping</p>
+                                </div>
+
+                            </div>
+                            <!-- col 2 -->
+                            <div class="p-1 md:p-4 space-y-2 ">
+                                <div class=" space-y-1">
+                                    <h1 class="text-base font-medium">Payment method </h1>
+                                    <p class="text-sm">Cash on Delivery (COD)<span
+                                            class="font-medium text-sm">Rs2,600.00</span></p>
+                                </div>
+                                <div class="text-left space-y-1">
+                                    <h1 class="text-base font-medium">Billing address </h1>
+                                    <p class="text-sm">M Street.. </p>
+                                    <p class="text-sm">M Street..</p>
+                                    <p class="text-sm">M Street..</p>
+                                    <p class="text-sm">M Street..</p>
+                                    <p class="text-sm">69696969</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                     <div class="mx-4 my-5 block md:flex justify-end items-center">
+
+                       <button
+                            class="bg-gray-800  text-white text-center w-full md:w-[45%] 2xl:w-[40%] xl:w-[50%] lg:w-[50%] p-4 text-sm font-medium rounded-md"
+                            id="form2ToForm3Btn" style="letter-spacing: 2px;"><a href="index.html">continue
+                            to
+                            shipping</a></button>
+
+                    </div>
+                    <div class="flex justify-center items-center text-sm my-6 space-x-2 ">
+
+                        <div class="cursor-pointer" style="letter-spacing: 2px;">Need help?Contact us</div>
+                    </div>
+                    <!-- <div class="flex-grow mt-32 hidden md:block"> -->
+                    <!-- Empty div to push footer down if there's not enough content -->
+                    <!-- </div> -->
+
+                    <div class="mx-7 my-6 md:mt-32 2xl:mt-40 mt-6   ">
+                        <hr class="border border-gray-200 w-full my-4">
+                        <p class=" text-sm underline ">Refund Ploicy <span class="text-sm underline mx-4">Terms of
+                                Service</span></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- col 2 -->
+        <div class="bg-gray-100 italic p-4 hidden lg:block col-span-1 md:col-span-1 w-full md:w-30 ">
+            <div class="flex items-center justify-center m-16 mr-56 lg:mr-16 xl:mr-36">
+                <img src="https://media.istockphoto.com/id/1081025754/photo/mens-black-leather-shoes-on-a-black-background.jpg?s=612x612&w=0&k=20&c=ZlSlv4s3StVBpjNUO2guUNbuKFKwnpoMyS-ljY3uyUk="
+                    class="rounded-md w-32 h-auto" alt="">
+                <div class="text-base mx-4 font-serif">American Eagle (Special Colors) <br>
+                    <spanc class="text-black text-sm ">American Eagle Silver Grey</span>
+                </div>
+                <div class="ml-auto text-sm text-gray-500"> Rs 3,500.00</div>
+
+            </div>
+            <!-- flex 2 -->
+            <div class="flex items-center justify-center mt-6 ml-16 mr-56 lg:mr-16 xl:mr-36">
+                <div class="text-sm ">Subtotal</div>
+                <div class="text-sm  font-bold ml-auto">Rs 3,500.00</div>
+
+            </div>
+            <!-- flex 3 -->
+            <div class="flex items-center justify-center mt-6 ml-16 mr-56 lg:mr-16 xl:mr-36">
+                <div class="text-sm  font-bold">Total</div>
+                <div class="text-sm  font-bold ml-auto"> <span class="text-gray-300 font-normal">PKR</span> Rs 3,500.00
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+    <script>
+        const form1 = document.getElementById("form1");
+        const form2 = document.getElementById("form2");
+        const form3 = document.getElementById("form3");
+        const form4 = document.getElementById("form4");
+
+        const form1ToForm2Btn = document.getElementById("form1ToForm2Btn");
+        const form2ToForm3Btn = document.getElementById("form2ToForm3Btn");
+        const form2ToForm1Btn = document.getElementById("form2ToForm1Btn");
+        const form3ToForm4Btn = document.getElementById("form3ToForm4Btn");
+        const form3ToForm2Btn = document.getElementById("form3ToForm2Btn");
+
+        form1ToForm2Btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            form1.style.display = "none";
+            form2.style.display = "block";
+            form3.style.display = "none";
+            form4.style.display = "none";
+        });
+
+        form2ToForm3Btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            form2.style.display = "none";
+            form3.style.display = "block";
+            form4.style.display = "none";
+        });
+
+        form2ToForm1Btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            form2.style.display = "none";
+            form1.style.display = "block";
+            form3.style.display = "none";
+            form4.style.display = "none";
+        });
+
+        form3ToForm4Btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            form3.style.display = "none";
+            form4.style.display = "block";
+        });
+
+        form3ToForm2Btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            form3.style.display = "none";
+            form2.style.display = "block";
+            form4.style.display = "none";
+        });
+        // expanding all the sections + rotating upto 45 degree 
+        document.addEventListener("DOMContentLoaded", function () {
+            const navexpList = document.querySelectorAll(".navexp");
+            const hide1List = document.querySelectorAll(".hide1");
+
+            navexpList.forEach((navexp, index) => {
+                let isRotated = false;
+
+                navexp.addEventListener("click", () => {
+                    hide1List[index].classList.toggle("hidden");
+                    isRotated = !isRotated;
+
+                    if (isRotated) {
+                        navexp.style.transform = "rotate(45deg)";
+                    } else {
+                        navexp.style.transform = "rotate(0deg)";
+                    }
+                });
+
+                window.addEventListener("click", function (event) {
+                    if (!navexp.contains(event.target) && !hide1List[index].contains(event.target)) {
+                        hide1List[index].classList.add("hidden");
+                        isRotated = false;
+                        navexp.style.transform = "rotate(0deg)";
+                    }
+                });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const navexpLists = document.querySelectorAll(".navexp1");
+            const hide1Lists = document.querySelectorAll(".hide11");
+
+            navexpLists.forEach((navexp1, index) => {
+                let isRotateds = false;
+
+                navexp1.addEventListener("click", () => {
+                    hide1Lists[index].classList.toggle("hidden");
+                    isRotateds = !isRotateds;
+
+                    if (isRotateds) {
+                        navexp1.style.transform = "rotate(0deg)";
+                    } else {
+                        navexp1.style.transform = "rotate(0deg)";
+                    }
+                });
+
+                window.addEventListener("click", function (event) {
+                    if (!navexp1.contains(event.target) && !hide1Lists[index].contains(event.target)) {
+                        hide1Lists[index].classList.add("hidden");
+                        isRotateds = false;
+                        navexp1.style.transform = "rotate(0deg)";
+                    }
+                });
+            });
+        });
+        // Changigng the colors of the div 
+        const divWithBorder = document.getElementById('divWithBorder');
+        const divWithoutBorder = document.getElementById('divWithoutBorder');
+
+        divWithBorder.addEventListener('click', () => {
+            divWithBorder.classList.add('border-2', 'border-black');
+            divWithoutBorder.classList.remove('border-2', 'border-black');
+        });
+
+        divWithoutBorder.addEventListener('click', () => {
+            divWithBorder.classList.remove('border-2', 'border-black');
+            divWithoutBorder.classList.add('border-2', 'border-black');
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownBtn = document.getElementById("dropdownBtn");
+            const dropdownContent = document.getElementById("dropdownContent");
+
+            dropdownBtn.addEventListener("click", function () {
+                dropdownContent.classList.toggle("hidden");
+            });
+        });
+         // for loading spinner 
+   document.addEventListener("DOMContentLoaded", function () {
+  // Hide the loading spinner and show the content
+  document.getElementById("loading-container").style.display = "none";
+  document.getElementById("content").style.display = "block";
+});
+
+    </script>
+    <!-- for icons  -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

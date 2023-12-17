@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+       
+
+        .animate__animated.animate__slideInRight {
+            --animate-duration: 0.2s;
+        }
+
+        .animate__animated.animate__slideInUp {
+            --animate-duration: 0.2s;
+        }
+
+        .animate__animated.animate__fadeInUp {
+            --animate-duration: 0.2s;
+        }
+
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            animation: slideIn 0.3s ease-in-out;
+        }
+    </style>
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&family=Lobster&family=Nosifer&display=swap');
+    </style>
+    <style type="text/tailwindcss">
+
+
+        @layer utilities  {
+            .navs{
+                @apply relative tracking-[1px] hover:text-gray-400 cursor-pointer font-[Lobster]
+            }
+            .navs::after{
+                @apply content-[''] bg-pink-500 h-[3px] w-0 left-0 -bottom-[5px]
+                rounded-xl absolute duration-500 
+            }
+            .navs:hover::after{
+                @apply bg-pink-500 h-[3px] w-full left-0 -bottom-[5px]
+                rounded-xl absolute duration-500 
+            }
+          .btn{
+            @apply relative w-full border-2 mt-2 lg:mt-0 rounded-md border-black bg-transparent py-2 px-4 font-medium uppercase  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100
+          }
+          h1{
+            @apply font-bold text-sm
+          
+          }
+    }
+    </style>
+
+</head>
+
+<body>
+    <!-- for loading spinner  -->
+    <div id="loading-container" class="flex items-center justify-center h-screen">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-black"></div>
+    </div>
+
+    <!-- SAMLL SCERRN NAVBAR SECTION  -->
+    <div id="content" class="hidden">
+        <div class="text-white p-4 bg-black w-full flex items-center justify-center lg:space-x-3  ">
+            <p class="text-center md:text-sm  text-xs font-[lobster]" style="letter-spacing: 1px;">Elevate your Style!
+                Holiday Sale Up to 50% Off.</p>
+            <a href="allProducts.html">
+                <p class="ml-auto  underline text-xs lg:mx-5 italic">Shop</p>
+            </a>
+        </div>
+
+
+
+        <nav class="bg-white text-black p-4 flex justify-center items-center w-full shadow-2xl">
+            <div class=" w-1/4 flex justify-start items-center lg:space-x-16 space-x-2">
+                <label
+                    class=" lables lg:top-[23px] border-gray-300 lg:border-black text top-[20px] right-16 xl:right-96 lg:right-80  "
+                    id="dark-change"></label>
+                <h1 class="uppercase text-2xl font-bold hidden font-[Lobster]  lg:block" style="letter-spacing: 5px;">
+                    tth.</h1>
+                <ul class="hidden lg:flex justify-center items-center font-[Lobster] space-x-8 text-lg font-medium">
+                    <div class="group">
+                        <button class="navs">SummerCollections</button>
+                        <ul class="ul z-[50] text-[#5c5c5c] space-y-2 absolute text-base w-1/6  p-6 mt-5 py-5 hidden  bg-white border border-gray-300  shadow-md"
+                            style="border-top: 2px solid gray;">
+                            <li class=" px-6  hover:bg-gray-100">CASUAL PRET'23 </li>
+                            <li class=" px-6 hover:bg-gray-100">FALL'22 </li>
+                            <li class=" px-6 hover:bg-gray-100">S/S'22</li>
+                        </ul>
+                    </div>
+                    <div class="group">
+                        <button class="navs">SummerGlow </button>
+                        <ul class="ul z-[50] text-[#5c5c5c] space-y-2 absolute text-base w-1/6  p-6 mt-5 py-5 hidden  bg-white border border-gray-300  shadow-md"
+                            style="border-top: 2px solid gray;">
+                            <li class=" px-6  hover:bg-gray-100">CASUAL PRET'23 </li>
+                            <li class=" px-6 hover:bg-gray-100">FALL'22 </li>
+                            <li class=" px-6 hover:bg-gray-100">S/S'22</li>
+                        </ul>
+                    </div>
+                    <div class="group">
+                        <button class="navs">SolarFlare </button>
+                        <ul class="ul z-[50] text-[#5c5c5c] space-y-2 absolute text-base w-1/6  p-6 mt-5 py-5 hidden  bg-white border border-gray-300  shadow-md"
+                            style="border-top: 2px solid gray;">
+                            <li class=" px-6  hover:bg-gray-100">CASUAL PRET'23 </li>
+                            <li class=" px-6 hover:bg-gray-100">FALL'22 </li>
+                            <li class=" px-6 hover:bg-gray-100">S/S'22</li>
+                        </ul>
+                    </div>
+                    <div class="group">
+                        <button class="navs">BeachBreeze </button>
+                        <ul class="ul z-[50] text-[#5c5c5c] space-y-2 absolute text-base w-1/6  p-6 mt-5 py-5 hidden  bg-white border border-gray-300  shadow-md"
+                            style="border-top: 2px solid gray;">
+                            <li class=" px-6  hover:bg-gray-100">CASUAL PRET'23 </li>
+                            <li class=" px-6 hover:bg-gray-100">FALL'22 </li>
+                            <li class=" px-6 hover:bg-gray-100">S/S'22</li>
+                        </ul>
+                    </div>
+
+
+
+                </ul>
+                <svg id="openBtn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-align-justify">
+                    <line x1="21" y1="10" x2="3" y2="10"></line>
+                    <line x1="21" y1="6" x2="3" y2="6"></line>
+                    <line x1="21" y1="14" x2="3" y2="14"></line>
+                    <line x1="21" y1="18" x2="3" y2="18"></line>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-search ">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+            <div class=" text-center  w-1/2">
+                <h1 id="openBtns" class="uppercase lg:hidden font-bold font-[Lobster] text-lg "
+                    style="letter-spacing: 3px;">tth
+                </h1>
+            </div>
+
+            <div class="w-1/4 flex justify-end xl:space-x-12 lg:space-x-2">
+                <ul
+                    class="hidden lg:flex text-black justify-center items-center space-x-8 text-lg font-medium font-[Lobster]">
+
+                    <li class="navs">search</li>
+                    <li class="navs">Help</li>
+                    <li class="navs">My account</li>
+                </ul>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-lock p-2 rounded-full text-white bg-black">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+            </div>
+
+        </nav>
+
+        <!-- SIDE NABAR SECTION  -->
+
+        <div id="sidebar"
+            class="w-[70%] md:w-1/3  overflow-hidden overflow-y-scroll bg-black text-white fixed top-0 h-full transform -translate-x-full transition-transform xl:hidden z-[30] ">
+            <!-- Sidebar content -->
+            <button id="closeBtn" class="
+absolute top-1 right-1 p-2 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-x-square">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                </svg></button>
+            <div class="mx-2 relative py-6 px-3 mt-8">
+
+                <input type="checkbox" id="nav1" class="peer hidden" name="status">
+                <h1 class="text-lg font-[lobster]">SummerCollections</h1>
+                <label for="nav1"
+                    class=" absolute top-4 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                <div for="nav1"
+                    class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                    <div class="p-2 italic  text-sm text-center">
+                        <p>Sher</p>
+                        <p>Sher</p>
+                        <p>Sher</p>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="border-1 border-gray-100 mx-2 ">
+            <div class="mx-2 relative py-6 px-3">
+
+                <input type="checkbox" id="nav2" class="peer hidden" name="status">
+                <h1 class="text-lg font-[lobster]">SummerGlow</h1>
+                <label for="nav2"
+                    class=" absolute top-4 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                <div for="nav2"
+                    class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                    <div class="p-2 italic  text-sm text-center">
+                        <p>Sher</p>
+                        <p>Sher</p>
+                        <p>Sher</p>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="border-1 border-gray-100 mx-2 ">
+            <div class="mx-2 relative py-6 px-3">
+
+                <input type="checkbox" id="nav3" class="peer hidden" name="status">
+                <h1 class="text-lg font-[lobster]">SolarFlare</h1>
+                <label for="nav3"
+                    class=" absolute top-4 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                <div for="nav3"
+                    class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                    <div class="p-2 italic  text-sm text-center">
+                        <p>Sher</p>
+                        <p>Sher</p>
+                        <p>Sher</p>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="border-1 border-gray-100 mx-2 ">
+            <div class="mx-2 relative py-6 px-3">
+
+                <input type="checkbox" id="nav4" class="peer hidden" name="status">
+                <h1 class="text-lg font-[lobster]">BeachBreeze</h1>
+                <label for="nav4"
+                    class=" absolute top-4 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                <div for="nav4"
+                    class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                    <div class="p-2 italic  text-sm text-center">
+                        <p>Sher</p>
+                        <p>Sher</p>
+                        <p>Sher</p>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="border-1 border-gray-100 mx-2 ">
+
+        </div>
+
+        <!-- PAKISTAN FIXED SECTION (CURRENCY SECTION)  -->
+
+        <div class="fixed z-[10] top-[88%] right-[2%] inline-block text-left">
+            <div class="bg-[#f5f5f5] shadow-xl   border border-gray-300 text-gray-700 py-3 px-4  rounded leading-tight cursor-pointer"
+                id="dropdown-toggle" onclick="toggleDropdown()">
+                <img id="selected-item-image" class="h-6 w-6 mr-2 inline"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAkFBMVEUBQRz///8APxkAPhYAOxEANQD5+/oAMwAAOg4AQhoAPxTQ29Xg6eQAMQDj6+doiXVCZk5lgm90kX/w9PFSemIjVzeSppnJ1M2Im48XTy2yw7lXdWGHnpAwVzxAblMKRyOJp5WovbG/zcU4Z0ucsaWzvbYALAAsYUKjsKdbgWp3jX6An4xNcVoAPAkASSE4W0OU2LnTAAAC/klEQVRoge1Y25aiMBA0V4JhCBLRgUHFEXVwRv3/v1vuzroEDcLDnkO9Qiqd6up0kslkxIgRI0aM+D+ABmOGhrneDEONjEsUeYNQQ+xHMvAHkQX7wgbDcEPmbAH49PAQ3NMZB8ByWONXBF/iNl0bACBI40d/57/ADpErU+5tI/dkcolFtaIOk7A5TbmBKplkT3O9IDsctdnZLqMGUbPgKfkXkB5DaJPYiW7CkZ/pDeRV5UISSmB5V9cCn7q6wHOQBx5vVANZlhFupfM7uoETkQsOZqqByBAy/wMslPOrhno8H8idZlUQ8UJOy1+0A18UI7fNXjaOgVX8kP4y1Q58WS650StmXCqSp1yo/KQK/L2IS56aB8LJ+ntZhU4TLXboF1YB1odCT4jJ4ZCtTkoK6IcOO/6wCnL+05Kstz0A9jyJl9zaaWzJ01O5YpVZcpCYgu83RogvlIb9F3ATV+RtIZGQ8nPmFMg0zIhWpVfAso2cuWCuaZSM3LGfkYW5W93anGT5rDysdEsew7pLt8CzukBmbevu1Oemoi6/d0Ub6g7k1uSxOSD556rvE8svWWRbRjvhllAAwr51uVkxdXrfutyKKIXoWZdb+Weh6zaaB7htXBncnq3OTr/Iba9f1etmkSM49ypM3eZy0EW/wlQNuqwklzyOHT59I6uPFhX7ww0Qef6z5PWhqErqqf0iCpEjVk9npjrO1bEvLi3FBNksUJxwmkMXf4WeemZtKM+704UV6HQ8yLZ/kwMeXhrzisnPklo7rV0CXew7dsrdM7mTHjJjF0hA55o7ENvdCZNJHx0JwxgVwJiZIs/Nt3YllBeuO9hb98e5rlbXq5NEpWHjgy53dVVsgrSs2yca4A77Q3nJfQAad3sZKK7n7bDDrq8OxcNCG3jywiNS/iSiRrTqovct+OwxR0EdHNGrjQQZpsvlvS2pHXtGHz0KErKOuWUXM1ApbR4IsxfqHJicj0kYf+33+69QrM9vrN9DAcKEGCkIYa89Eo0YMWLEiBEV/gC+kygz4QIY+AAAAABJRU5ErkJggg==">
+                <!-- <img src="download.png" alt=""> -->
+                <!-- div -->
+                <span id="selected-item" class="text-sm text-gray-500 inline-flex"> PKR (ruppees)</span>
+                ▼
+            </div>
+            <ul class="absolute z-[-1] bottom-[105%] w-full p-1   text-sm text-gray-500  bg-white border border-gray-300 rounded-md shadow-md  hidden  animate__animated animate__fadeInUp"
+                id="dropdown-list">
+                <!-- The list items will be dynamically generated here -->
+            </ul>
+        </div>
+        <!-- MAIN SECTION CONTAINING IMAGES  -->
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:gap-2 lg:mx-32 mt-10 place-items-center">
+            <div class="  ">
+                    <img src="https://media.istockphoto.com/id/1257487861/photo/mens-white-shoes.jpg?s=612x612&w=0&k=20&c=e51o9hzSH2RAig4GwWz5GkG3ohqCS8vYxFlwEqM_pOU="
+                        class="transform hover:scale-105 transition duration-300 w-64 lg:w-96 h-64 lg:h-96" alt="">
+
+            </div>
+
+            <!-- ALL THE THINGS CONTAINING ON THE LEFT SIDE-->
+
+            <div class="lg:text-left text-center">
+                <h1 class="text-gray-600 text-xl   mt-10 font-normal" style="letter-spacing: 2px; font-family: serif;">
+                    LUNA
+                </h1>
+                <p class="text-gray-400 text-lg  mt-5 ">Rs 166,130,14</p>
+                <div class="md:mx-44 lg:mx-0  mx-5  ">
+
+
+                    <h1 class=" mt-5 mb-2 lg:mx-0  flex justify-start md:mx-5 text-gray-500">Size:</h1>
+
+                </div>
+
+
+                <div
+                    class="sixe flex items-center justify-center xl:justify-start  mx-5  mt-1 space-x-2 md:mx-48 lg:mx-0 w-[40%] md:w-[20%]  lg:w-[40%] ">
+                    <div id="div1" class="cursor-pointer  border my-div border-black p-3 px-4 text-sm  text-gray-500">S
+                    </div>
+                    <div id="div2"
+                        class="cursor-pointer border my-div border-gray-200   p-3  px-4 text-sm  text-gray-500">M
+                    </div>
+                    <div id="div3"
+                        class="cursor-pointer border my-div border-gray-200  p-3 px-4 text-sm  text-gray-500">L
+                    </div>
+
+                </div>
+
+                <!-- QUANTITY SECTION -->
+
+                <div class="flex items-center  mx-5  mt-5 md:mx-48 lg:mx-0 text-gray-500 ">
+                    <h1>Quantity:</h1>
+                    <div class="flex items-center space-x-1 ml-auto">
+
+                        <ion-icon name="pie-chart-outline" class="text-black text-lg font-bold italic "></ion-icon>
+                        <div id="openPopupDiv" class="text-sm underline cursor-pointer">Size Chart</div>
+
+                    </div>
+
+
+                </div>
+                <div
+                    class="sixe flex justify-center ml-5 mt-4 space-x-8 w-[40%] md:w-[20%]  lg:w-[40%]  border-2 border-gray-200 p-3 px-10   md:mx-48 lg:mx-0">
+                    <div class="quantity-container space-x-10 flex items-center px-12 lg:px-16  ">
+
+                        <ion-icon name="remove-outline" class="minus cursor-pointer"></ion-icon>
+                        <span class="quantity-display" contenteditable="true">1</span>
+                        <ion-icon name="add-outline" class="plus  cursor-pointer"></ion-icon>
+                    </div>
+
+
+
+                </div>
+               <a href="Checkout.html"> <div
+                    class=" mx-5 my-4   text-center md:mx-48 lg:mx-0  ">
+                    <button class="btn" style="letter-spacing: 2px;">ADD TO CART</button>
+                </div>
+            </a>
+
+                <div
+                    class="flex rounded-md items-center bg-black text-white justify-center mx-5 mt-4 font-serif space-x-3 p-3 md:mx-48 lg:mx-0 ">
+                    <img src="https://cdn.shopify.com/s/files/1/0069/3777/2121/files/whatsapp.png?1647" class="w-5"
+                        alt="">
+                    <div class="text-base">
+                        WHATSAPP
+                    </div>
+
+                </div>
+                
+
+                <hr class="mx-5  border border-gray-200 mt-3 md:mx-48 lg:mx-0 ">
+               
+
+
+                <!-- socail media links  -->
+
+                <div class="lg:flex justify-start items-center mt-4 space-x-4 ">
+                    <h1 class="text-sm text-gray-400 ">
+                        Share
+
+                    </h1>
+                    <div class="flex justify-center items-center space-x-3 text-2xl">
+                        <ion-icon name="logo-vimeo" class="bg-black text-white rounded-full p-1 "></ion-icon>
+                        <ion-icon name="logo-twitter" class="bg-black text-white rounded-full p-1"></ion-icon>
+                        <ion-icon name="logo-pinterest" class="bg-black text-white rounded-full p-1"></ion-icon>
+                    </div>
+                </div>
+        
+
+            </div>
+        </div>
+
+
+
+               <!-- FOOTER SECTION FOR SMALL SCREENS -->
+        <!-- stor section  -->
+        <div class="space-y-2 lg:hidden my-6">
+            <div class="mx-2 relative p-4">
+
+                <input type="checkbox" id="sher" class="peer hidden" name="status">
+                <h1 class="text-sm font-serif font-normal uppercase">About Trendy Treads</h1>
+                <label for="sher" class=" absolute top-1 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-nore
+                  ">+</label>
+                <div for="sher"
+                    class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                    <div class="p-2 text-sm text-justify italic">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio
+                            tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga
+                            quas soluta voluptatum dicta vel? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate
+                            impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel?</p>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <hr class="mx-4">
+            <div class="mx-2 relative p-4">
+
+                <input type="checkbox" id="shers" class="peer hidden" name="status">
+                <h1 class="text-sm font-serif font-normal uppercase">Address</h1>
+                <label for="shers"
+                    class=" absolute top-1 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                <div for="shers"
+                    class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                    <div class="p-2 italic text-sm text-justify">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio
+                            tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga
+                            quas soluta voluptatum dicta vel? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate
+                            impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel?</p>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <hr class="mx-4">
+            <div class="mx-2 relative p-4">
+
+                <input type="checkbox" id="sher1" class="peer hidden" name="status">
+                <h1 class="text-sm font-serif font-normal uppercase">Info</h1>
+                <label for="sher1"
+                    class=" absolute top-1 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                <div for="sher1"
+                    class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                    <div class="p-2 italic text-sm text-justify">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio
+                            tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga
+                            quas soluta voluptatum dicta vel? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate
+                            impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel?</p>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <hr class="mx-4">
+            <div class="mx-2 relative p-4">
+
+                <input type="checkbox" id="sher2" class="peer hidden" name="status">
+                <h1 class="text-sm font-serif font-normal uppercase">Follow Us</h1>
+                <label for="sher2"
+                    class=" absolute top-1 right-3 peer-checked:transform peer-checked:rotate-45 text-3xl transition-all duration-500 inline-block ml-auto font-normal">+</label>
+                <div for="sher2"
+                    class=" overflow-scroll max-h-0 peer-checked:max-h-[40vh] transform   transition-all duration-500 md:min-96 mx-2">
+
+                    <div class="p-2 italic text-justify text-sm">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eos suscipit temporibus optio
+                            tempora tempore quibusdam, enim deserunt cupiditate impedit magni minima vero explicabo fuga
+                            quas soluta voluptatum dicta vel? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Fugit eos suscipit temporibus optio tempora tempore quibusdam, enim deserunt cupiditate
+                            impedit magni minima vero explicabo fuga quas soluta voluptatum dicta vel?</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER SECTION FOR LARGE SCREENS   -->
+        <hr class="border-1 border-gray-200 w-full mt-10 hidden md:block">
+
+        <div class=" justify-evenly items-center hidden md:block font-[lobster] ">
+            <div class="grid grid-cols-3 md:grid-cols-2 xl:grid-cols-3 mt-6 gap-2 justify-center mx-16 ">
+                <div class=" p-4 text-left ">
+                    <div class=" ">
+                        <h1 class="  underline " style="letter-spacing: 2px;">STORE</h1>
+                        <div class="para ">
+                            <div id="desk1" class=" mt-3 text-left   text-gray-600" style="letter-spacing: 1px;">
+                                <h1 class="text-gray-400 italic text-sm md:text-base  "> 5-R, Gulberg Main road
+                                    Lahoreasas
+                                </h1>
+                                <h2 class=" text-gray-400  text-sm ">For Online Orders Queries: +92 346 111 39626 For
+                                    Booking an
+                                    Appointment: +92 345 849 6756
+                                </h2>
+                                <h3 class="my-5 text-gray-400 text-sm  ">
+                                    Store Hours
+                                </h3>
+                                <h4 class="text-sm text-gray-400 md:text-base">MONDAY - SATURDAY :</h4>
+                                <h4 class="text-sm text-gray-400 md:text-base my-5">11:00 am - 07:00 pm</h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" p-4 text-right">
+                    <div class="">
+                        <h1 class="underline" style="letter-spacing: 2px;">ABOUT TTH</h1>
+                        <div class="para">
+                            <div id="desk2" class="   mt-2 text-right text-gray-600  ">
+                                <p class="mb-6 mt-3 text-sm text-gray-400 md:text-base "
+                                    style="line-height: 25px; letter-spacing: 0.2px; ">Lorem ipsum dolor sit
+                                    amet consectetur adipisicing elit. Sed provident eius magnam non consequatur
+                                    consequuntur
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" p-4  xl:text-right md:text-left">
+                    <div class="">
+                        <h1 class=" underline" style="letter-spacing: 2px;">CUSTOMER SERVICE </h1>
+                        <div class="para">
+                            <div id="desk3" class=" xl:text-right md:text-left text-sm md:text-base  text-gray-400">
+                                <div class="space-y-2" style="letter-spacing: 1px;">
+                                    <h1  >Contact us</h1>
+                                    <h1  >About us </h1>
+                                    <h1  > exchange & Refunds</h1>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- on sm screens  -->
+        <h1 class="text-center text-sm font-medium text-gray-400 mt-6">GET TO KNOW US</h1>
+        <div class=" flex  justify-center items-center space-x-5 p-4 ">
+            <ion-icon name="logo-facebook" class="text-black text-2xl md:text-3xl  font-bold "></ion-icon>
+            <ion-icon name="call-outline" class="text-black text-2xl md:text-3xl font-bold "></ion-icon>
+            <ion-icon name="logo-instagram" class="text-black text-2xl md:text-3xl font-bold "></ion-icon>
+            <ion-icon name="mail-outline" class="text-black text-2xl md:text-3xl font-bold "></ion-icon>
+            <ion-icon name="logo-whatsapp" class="text-black text-2xl md:text-3xl font-bold "></ion-icon>
+            <!-- grid div ends here  -->
+
+            <!-- sixe -->
+        
+    </div>
+
+        <!-- POP UP SECTION   -->
+
+
+        <div class="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-50 z-10 hidden " id="popup">
+            <div
+                class="bg-white fixed top-2  md:top-6 bottom-2  md:bottom-6 right-2 overflow-hidden overflow-y-scroll  md:right-6  left-2 md:left-6  shadow-md popup-content lg:w-2/3 xl:h-[90vh] h-screen w-[95vw] xl:w-1/2 mx-auto">
+
+                <div class="m-0">
+                    <div class=" absolute top-7 right-4   px-4 py-2 rounded" id="closeButton"><ion-icon class="text-xl"
+                            name="close-outline"></ion-icon></div>
+
+                    <h2 class="text-xl text-center font-serif font-semibold mt-8 ">LUNA</h2>
+
+                    <h2 class="text-sm text-center font-serif mb-4 text-gray-500 ">Size Chart</h2>
+                    <hr class="border border-gray-600 w-full ">
+                    <p class="text-red-800 text-2xl m-6 font-bold  " style="line-height: 40px;">Size Chart of Ready Wear
+                        2023 (Suffuse by Sana Yasir) </p>
+                    <!-- table  -->
+                    <div class="table mx-auto">
+                        <h1 class="text-sm text-center m-4 text-blue-500">CM <span
+                                class="text-sm font-serif text-gray-300">| INCHES</span></h1>
+                        <table class="table-auto border mx-2 w-full  text-center  md:text-xl lg:text-2xl xl:text-3xl"
+                            style="font-size: 10px;">
+                            <thead>
+                                <tr>
+                                    <th class="border px-4 md:px-10 lg:px-16 xl:px-24 py-1 text-center">POINT OF MEASURE
+                                    </th>
+                                    <th class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1 text-center">S</th>
+                                    <th class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1 text-center">M</th>
+                                    <th class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1 text-center">L</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="border font-bold">Sixe</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td class="border font-bold">SHOULDER+SLV LENGTH C/B</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+
+                                <!-- row 3  -->
+                                <tr>
+                                    <td class="border font-bold">SHOULDER+SLV LENGTH C/B</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+                                <!-- row 4 -->
+                                <tr>
+                                    <td class="border font-bold">SHOULDER+SLV LENGTH C/B</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+
+                                <!-- row 5  -->
+                                <tr>
+                                    <td class="border md:px-8 lg:px-12 xl:px-8 2xl:px-16 font-bold">SHOULDER+SLV LENGTH
+                                        C/B
+                                    </td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+
+
+                                <!-- row 7 -->
+                                <tr>
+                                    <td class="border md:px-8 lg:px-12 xl:px-8 2xl:px-16 font-bold">SHOULDER+SLV LENGTH
+                                        C/B
+                                    </td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+
+                                <!-- row8  -->
+                                <tr>
+                                    <td class="border md:px-8 lg:px-12 xl:px-8 2xl:px-16 font-bold">SHOULDER+SLV LENGTH
+                                        C/B
+                                    </td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <h1 class="text-center font-medium font-serif text-2xl mt-10 ">Pants</h1>
+                        <h1 class="text-sm text-center m-4 text-blue-500">CM <span
+                                class="text-sm font-serif text-gray-300">| INCHES</span></h1>
+                        <table
+                            class="table-auto border mb-10 mx-2 w-full  text-center  md:text-xl lg:text-2xl xl:text-3xl"
+                            style="font-size: 10px;">
+                            <thead>
+                                <tr>
+                                    <th class="border px-4 md:px-10 lg:px-16 xl:px-24 py-1 text-center"></th>
+                                    <th class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1 text-center">S</th>
+                                    <th class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1 text-center">M</th>
+                                    <th class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1 text-center">L</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="border font-bold">SHOULDER+SLV LENGTH C/B</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td class="border font-bold">SHOULDER+SLV LENGTH C/B</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+
+                                <!-- row 3  -->
+                                <tr>
+                                    <td class="border font-bold">SHOULDER+SLV LENGTH C/B</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+                                <!-- row 4 -->
+                                <tr>
+                                    <td class="border font-bold">SHOULDER+SLV LENGTH C/B</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-64md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+
+                                <!-- row 5  -->
+                                <tr>
+                                    <td class="border md:px-8 lg:px-12 xl:px-8 2xl:px-16 font-bold">SHOULDER+SLV LENGTH
+                                        C/B
+                                    </td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                    <td class="border px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16 py-1">1</td>
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- funtionality for popup  -->
+
+    <script>
+        const openPopupDiv = document.getElementById('openPopupDiv');
+        const closeButton = document.getElementById('closeButton');
+        const popup = document.getElementById('popup');
+        const popupContent = document.querySelector('.popup-content');
+
+        openPopupDiv.addEventListener('click', () => {
+            popup.classList.remove('hidden');
+            popupContent.classList.add('slide-in');
+        });
+
+        closeButton.addEventListener('click', () => {
+            popupContent.classList.remove('slide-in');
+            setTimeout(() => {
+                popup.classList.add('hidden');
+            }, 300); // Wait for the animation to finish
+        });
+
+
+
+        // for side bar 
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('openBtn');
+        const closeBtn = document.getElementById('closeBtn');
+
+        openBtn.addEventListener('click', () => {
+            sidebar.classList.remove('-translate-x-full');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+        });
+
+        // pakistan fixed section of countries paissaaas
+        // FOR CURRENCY SECTION 
+        const items = [
+            { label: 'PKR (ruppees)', image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAkFBMVEUBQRz///8APxkAPhYAOxEANQD5+/oAMwAAOg4AQhoAPxTQ29Xg6eQAMQDj6+doiXVCZk5lgm90kX/w9PFSemIjVzeSppnJ1M2Im48XTy2yw7lXdWGHnpAwVzxAblMKRyOJp5WovbG/zcU4Z0ucsaWzvbYALAAsYUKjsKdbgWp3jX6An4xNcVoAPAkASSE4W0OU2LnTAAAC/klEQVRoge1Y25aiMBA0V4JhCBLRgUHFEXVwRv3/v1vuzroEDcLDnkO9Qiqd6up0kslkxIgRI0aM+D+ABmOGhrneDEONjEsUeYNQQ+xHMvAHkQX7wgbDcEPmbAH49PAQ3NMZB8ByWONXBF/iNl0bACBI40d/57/ADpErU+5tI/dkcolFtaIOk7A5TbmBKplkT3O9IDsctdnZLqMGUbPgKfkXkB5DaJPYiW7CkZ/pDeRV5UISSmB5V9cCn7q6wHOQBx5vVANZlhFupfM7uoETkQsOZqqByBAy/wMslPOrhno8H8idZlUQ8UJOy1+0A18UI7fNXjaOgVX8kP4y1Q58WS650StmXCqSp1yo/KQK/L2IS56aB8LJ+ntZhU4TLXboF1YB1odCT4jJ4ZCtTkoK6IcOO/6wCnL+05Kstz0A9jyJl9zaaWzJ01O5YpVZcpCYgu83RogvlIb9F3ATV+RtIZGQ8nPmFMg0zIhWpVfAso2cuWCuaZSM3LGfkYW5W93anGT5rDysdEsew7pLt8CzukBmbevu1Oemoi6/d0Ub6g7k1uSxOSD556rvE8svWWRbRjvhllAAwr51uVkxdXrfutyKKIXoWZdb+Weh6zaaB7htXBncnq3OTr/Iba9f1etmkSM49ypM3eZy0EW/wlQNuqwklzyOHT59I6uPFhX7ww0Qef6z5PWhqErqqf0iCpEjVk9npjrO1bEvLi3FBNksUJxwmkMXf4WeemZtKM+704UV6HQ8yLZ/kwMeXhrzisnPklo7rV0CXew7dsrdM7mTHjJjF0hA55o7ENvdCZNJHx0JwxgVwJiZIs/Nt3YllBeuO9hb98e5rlbXq5NEpWHjgy53dVVsgrSs2yca4A77Q3nJfQAad3sZKK7n7bDDrq8OxcNCG3jywiNS/iSiRrTqovct+OwxR0EdHNGrjQQZpsvlvS2pHXtGHz0KErKOuWUXM1ApbR4IsxfqHJicj0kYf+33+69QrM9vrN9DAcKEGCkIYa89Eo0YMWLEiBEV/gC+kygz4QIY+AAAAABJRU5ErkJggg==' },
+            { label: 'USD (dollars)', image: 'data:image/png;base64,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' },
+
+        ]; // List of items with labels and images
+        let selectedItem = items[0]; // Default selected item
+
+        function generateDropdownList() {
+            const dropdownList = document.getElementById('dropdown-list');
+            dropdownList.innerHTML = ''; // Clear the list
+
+            items.forEach(item => {
+                if (item !== selectedItem) {
+                    const listItem = document.createElement('li');
+                    listItem.classList.add('flex', 'items-center', 'py-2', 'px-4', 'hover:bg-gray-100', 'cursor-pointer');
+
+                    const itemImage = document.createElement('img');
+                    itemImage.src = item.image;
+                    itemImage.classList.add('h-6', 'w-6', 'mr-2');
+                    listItem.appendChild(itemImage);
+
+                    const itemLabel = document.createElement('span');
+                    itemLabel.textContent = item.label;
+                    listItem.appendChild(itemLabel);
+
+                    listItem.onclick = () => selectOption(item);
+                    dropdownList.appendChild(listItem);
+                }
+            });
+        }
+
+        function toggleDropdown() {
+            const dropdownList = document.getElementById('dropdown-list');
+            dropdownList.classList.toggle('hidden');
+        }
+
+        function selectOption(item) {
+            const selectedItemElement = document.getElementById('selected-item');
+            selectedItemElement.textContent = item.label;
+
+            const selectedItemImageElement = document.getElementById('selected-item-image');
+            selectedItemImageElement.src = item.image;
+
+            selectedItem = item;
+            generateDropdownList();
+            toggleDropdown();
+        }
+
+        generateDropdownList(); // Generate the initial list
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const divs = document.querySelectorAll(".my-div");
+
+            divs.forEach(div => {
+                div.addEventListener("click", () => handleDivClick(divs, div));
+            });
+        });
+
+        function handleDivClick(allDivs, clickedDiv) {
+            allDivs.forEach(div => {
+                if (div === clickedDiv) {
+                    div.classList.add("border-black");
+                    div.classList.remove("border-gray-200");
+                } else {
+                    div.classList.remove("border-black");
+                    div.classList.add("border-gray-200");
+                }
+            });
+        }
+
+
+
+
+        // for quantity buttons 
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const quantityDisplayList = document.querySelectorAll(".quantity-display");
+            const plusButtonList = document.querySelectorAll(".plus");
+            const minusButtonList = document.querySelectorAll(".minus");
+
+            quantityDisplayList.forEach((quantityDisplay, index) => {
+                let quantity = 1;
+                let edited = false;
+
+                updateQuantityDisplay();
+
+                plusButtonList[index].addEventListener("click", () => {
+                    quantity++;
+                    edited = true;
+                    updateQuantityDisplay();
+                });
+
+                minusButtonList[index].addEventListener("click", () => {
+                    if (quantity > 1) {
+                        quantity--;
+                        edited = true;
+                        updateQuantityDisplay();
+                    }
+                });
+
+                quantityDisplay.addEventListener("input", () => {
+                    const inputValue = parseInt(quantityDisplay.textContent);
+
+                    if (!isNaN(inputValue) && inputValue >= 1) {
+                        quantity = inputValue;
+                        edited = true;
+                    } else if (isNaN(inputValue)) {
+                        quantity = 1;
+                        edited = false;
+                    }
+
+                    updateQuantityDisplay();
+                });
+
+                quantityDisplay.addEventListener("keydown", (event) => {
+                    if (event.key === "Enter") {
+                        const inputValue = parseInt(quantityDisplay.textContent);
+
+                        if (!isNaN(inputValue) && inputValue >= 1) {
+                            quantity = inputValue;
+                            edited = true;
+                            updateQuantityDisplay();
+                        } else {
+                            quantity = 1;
+                            edited = false;
+                            updateQuantityDisplay();
+                        }
+                    }
+                });
+
+                function updateQuantityDisplay() {
+                    if (edited) {
+                        quantityDisplay.textContent = quantity;
+                    } else {
+                        quantityDisplay.textContent = quantity !== 1 ? quantity : '1';
+                    }
+                }
+
+                // Initialize the content on page load
+                updateQuantityDisplay();
+            });
+        });
+
+
+        // craeting for nav dropdowns 
+
+
+        const dropdownGroups = document.querySelectorAll('.group');
+
+        dropdownGroups.forEach(dropdownGroup => {
+            const dropdownMenu = dropdownGroup.querySelector('.ul');
+            let timer;
+
+            dropdownGroup.addEventListener('mouseenter', () => {
+                clearTimeout(timer);
+                dropdownMenu.classList.remove('hidden');
+            });
+
+            dropdownGroup.addEventListener('mouseleave', () => {
+                timer = setTimeout(() => {
+                    dropdownMenu.classList.add('hidden');
+                }, 100);
+            });
+
+            dropdownMenu.addEventListener('mouseenter', () => {
+                clearTimeout(timer);
+            });
+
+            dropdownMenu.addEventListener('click', () => {
+                dropdownMenu.classList.add('hidden');
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // for loading spinner 
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hide the loading spinner and show the content
+            document.getElementById("loading-container").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        });
+
+
+
+
+
+
+
+
+    </script>
+
+
+    <!-- for icons  -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- SCRPITS FOR OWL CARSOUSEL -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- OWL CAROUSEL COMES HERE -->
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 1,
+            nav: true,
+            loop: true,
+            dots: true,
+            // autoplay: false,
+            autoplayTimeout: 2000,
+            // autoplayHoverPause: true
+        });
+        // $('.play').on('click', function () {
+        //     owl.trigger('play.owl.autoplay', [1000])
+        // })
+        // $('.stop').on('click', function () {
+        // owl.trigger('stop.owl.autoplay')
+        // })
+    </script>
+    <!-- script source  -->
+    <!-- <script src="script.js"></script> -->
+
+</body>
+
+</html>
