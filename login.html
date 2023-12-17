@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <input type="email"  id="Loginemail" name="email" value="email" class="Logininput" placeholder="Email address"><br><br>
+        <input type="password" class="Logininput" id="Loginpass" placeholder="Password"><br><br>
+        <button class="Loginbuttons" id="Loginb1" onclick="login();">Log
+            In</button><br><br>
+        <hr style="margin-top:9px"><br>
+        <button class="Loginbuttons" id="Loginaccount">Create New
+            Account</button>
+    </form>
+    <script>
+        var usernames = ['Hamid1999@gmail.com', 'Mooojn', "Zain12", "Fajar32"]
+        var passwords = ["1234", "1234", "1234", "1234"]
+
+        function login() {
+            // e.preventDefault();
+            var check = false;
+            var email = document.getElementById('Loginemail').value;
+            var password = document.getElementById('Loginpass').value;
+
+            for (var i = 0; i < usernames.length; i++) {
+                if (email == usernames[i] && password == passwords[i]) {
+                    check = true;
+                    break
+                }
+                
+            }
+            if (check == false) {
+                alert("Invalid Email or Password")
+            }
+            else
+            {
+                console.log("Logged In");
+                window.location.href = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
